@@ -31,8 +31,8 @@ const Chatbot = () => {
     const messagesEndRef = useRef(null);
     const navigate = useNavigate();
 
-    // Flatten all FAQs for easier searching
-    const allFaqs = faqData.flatMap(category => category.questions);
+    // Use faqData directly as it's now a flat array
+    const allFaqs = faqData;
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -73,7 +73,7 @@ const Chatbot = () => {
         const queryWords = cleanQuery.split(/\s+/);
 
         // Greetings check
-        const greetings = ["hi", "hello", "good morning", "good afternoon", "good evening", "hey", "hola", "hi there", "greetings"];
+        const greetings = ["hi", "hello", "good morning", "good afternoon", "good evening", "hey", "hola", "hi there", "greetings", "yo"];
         const isGreeting = greetings.some(greet => cleanQuery === greet || cleanQuery.startsWith(greet + " "));
 
         if (isGreeting) {
@@ -130,7 +130,7 @@ const Chatbot = () => {
                     </button>
                 </div>
             );
-        } else if (queryWords.includes("quote") || queryWords.includes("quotation") || queryWords.includes("price") || queryWords.includes("cost") || queryWords.includes("how much")) {
+        } else if (queryWords.includes("quote") || queryWords.includes("quotation") || queryWords.includes("price") || queryWords.includes("cost") || queryWords.includes("how much") || queryWords.includes("billing")) {
             botResponse = (
                 <div className="bot-welcome-msg">
                     <p>Getting a free quote from GSTAT is easy!</p>
@@ -141,52 +141,33 @@ const Chatbot = () => {
                 </div>
             );
         } else {
-            // Keyword-based priority matching
-            const keywordMap = [
-                { keywords: ["service", "offer", "marketing", "website", "app", "sms"], faqIndex: 0 },
-                { keywords: ["growth", "help", "how", "business", "benefit"], faqIndex: 1 },
-                { keywords: ["consultation", "free", "advice", "start", "new"], faqIndex: 2 },
-                { keywords: ["why", "choose", "gstat", "best", "leading"], faqIndex: 3 },
-                { keywords: ["website", "app", "design", "build", "mobile", "ios", "android"], faqIndex: 4 },
-                { keywords: ["how", "long", "time", "project", "weeks"], faqIndex: 5 },
-                { keywords: ["seo", "responsive", "rank", "google", "mobile-friendly"], faqIndex: 6 },
-                { keywords: ["bulk", "sms", "marketing", "send", "messages"], faqIndex: 7 },
-                { keywords: ["voice", "sms", "audio", "calls", "pre-recorded"], faqIndex: 8 },
-                { keywords: ["integrate", "all-in-one", "multi-channel", "viber", "email"], faqIndex: 9 },
-                { keywords: ["social", "media", "facebook", "instagram", "tiktok", "manage"], faqIndex: 10 },
-                { keywords: ["sem", "ads", "google", "paid", "conversion", "ppc"], faqIndex: 11 },
-                { keywords: ["results", "how", "long", "time", "immediate"], faqIndex: 12 },
-                { keywords: ["cost", "price", "budget", "affordable", "quote"], faqIndex: 13 },
-                { keywords: ["report", "analytics", "tracking", "roi", "data"], faqIndex: 14 }
-            ];
-
-            // 1. Try keyword map first for higher accuracy on intent
+            // Updated Keyword Matching Logic
             let bestMatch = null;
-            let highestCount = 0;
+            let highestScore = 0;
 
-            for (const item of keywordMap) {
-                const matchCount = item.keywords.filter(kw => queryWords.includes(kw)).length;
-                if (matchCount > highestCount) {
-                    highestCount = matchCount;
-                    bestMatch = allFaqs[item.faqIndex];
+            for (const faq of allFaqs) {
+                let currentScore = 0;
+
+                // 1. Check keywords field (highest weight)
+                if (faq.keywords) {
+                    const keywordMatches = faq.keywords.filter(kw => queryWords.includes(kw)).length;
+                    currentScore += keywordMatches * 2;
+                }
+
+                // 2. Check question words
+                const faqQuestionWords = faq.question.toLowerCase().replace(/[^\w\s]/gi, '').split(/\s+/);
+                const questionMatches = queryWords.filter(word => faqQuestionWords.includes(word)).length;
+                currentScore += questionMatches;
+
+                // Update best match if score is better
+                if (currentScore > highestScore) {
+                    highestScore = currentScore;
+                    bestMatch = faq;
                 }
             }
 
-            // 2. Fallback to basic word intersection if no keyword map hit
-            if (!bestMatch) {
-                for (const faq of allFaqs) {
-                    const faqClean = faq.question.replace(/[^\w\s]/gi, '').toLowerCase();
-                    const faqWords = faqClean.split(/\s+/);
-                    const intersection = queryWords.filter(word => faqWords.includes(word));
-
-                    if (intersection.length >= 2) { // At least 2 words must match
-                        bestMatch = faq;
-                        break;
-                    }
-                }
-            }
-
-            if (bestMatch) {
+            // Threshold for matching
+            if (bestMatch && highestScore >= 1) {
                 botResponse = bestMatch.answer;
             } else {
                 botResponse = "Apologies, I am not sure about that. Please contact our support team at 090 6434 2047 or info@gstatmobile.com for more information.";

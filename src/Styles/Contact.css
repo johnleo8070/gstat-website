@@ -179,32 +179,50 @@
 
 @media (max-width: 600px) {
   .contact-section {
-    padding: 60px 15px;
+    padding: 40px 15px;
   }
 
   .contact-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
   }
 
   .contact-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
   }
 
   .contact-form-container {
-    padding: 25px;
+    padding: 18px;
   }
 
   .form-title {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    gap: 15px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
   }
 
   .form-group input,
   .form-group textarea {
-    padding: 12px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
   }
 
   .contact-submit-btn {
-    padding: 14px 30px;
-    font-size: 1rem;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    margin-top: 5px;
   }
 }
