@@ -8,8 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faUsers, faBullhorn, faPalette, faChess,
     faHandshake, faChartLine, faComments, faArrowUpRightDots,
-    faCheckCircle, faArrowRight, faMagnifyingGlassChart,
-    faCogs, faNewspaper, faBolt, faFileVideo, faLayerGroup
+    faCheckCircle, faArrowRight,
+    faCogs, faBolt, faFileVideo
 } from "@fortawesome/free-solid-svg-icons";
 import ServiceHero from "../../Components/ServiceHero";
 import bannerImg from "../../Assets/social_media_banner.png";

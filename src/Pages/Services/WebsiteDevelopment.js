@@ -10,7 +10,7 @@ import {
     faRotate, faCheckCircle, faRocket, faSearch,
     faShieldHalved, faGear, faChartBar, faUserCheck,
     faArrowRight, faCompassDrafting, faHeadset, faBolt,
-    faGlobe, faFileCode, faBrush
+    faGlobe, faFileCode
 } from "@fortawesome/free-solid-svg-icons";
 // Removed missing brands package import to fix build error
 import ServiceHero from "../../Components/ServiceHero";

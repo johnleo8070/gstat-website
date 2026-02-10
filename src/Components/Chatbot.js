@@ -4,7 +4,6 @@ import {
     faComments,
     faXmark,
     faPaperPlane,
-    faCircleDot,
     faHeadset,
     faUser,
     faPhone,

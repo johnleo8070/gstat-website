@@ -9,7 +9,7 @@ import {
     faEnvelope, faRobot, faNewspaper, faFilter,
     faPenNib, faChartPie, faArrowsSpin, faAddressBook,
     faCheckCircle, faArrowRight, faBolt, faMicrochip,
-    faShieldHalved, faGear, faEarthAfrica, faHeadset, faLayerGroup
+    faGear, faEarthAfrica, faHeadset, faLayerGroup
 } from "@fortawesome/free-solid-svg-icons";
 import ServiceHero from "../../Components/ServiceHero";
 import bannerImg from "../../Assets/email_marketing_banner.png";

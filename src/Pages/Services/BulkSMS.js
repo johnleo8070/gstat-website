@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faCommentSms, faShieldHalved, faIdCard, faCalendarCheck,
+    faShieldHalved, faIdCard, faCalendarCheck,
     faPaperPlane, faGaugeHigh, faCircleCheck, faBolt,
     faChartLine, faMicrochip, faHeadset, faRocket,
     faBuildingColumns, faGraduationCap, faMosque, faHospital,

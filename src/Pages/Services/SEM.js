@@ -9,7 +9,7 @@ import {
     faMagnifyingGlass, faBullhorn, faKey, faPenNib,
     faWindowRestore, faChartLine, faEye, faBolt,
     faCrosshairs, faHandHoldingDollar, faArrowUpRightDots,
-    faCheckCircle, faArrowRight, faHeadset, faCogs, faNewspaper
+    faCheckCircle, faArrowRight, faCogs
 } from "@fortawesome/free-solid-svg-icons";
 import ServiceHero from "../../Components/ServiceHero";
 import bannerImg from "../../Assets/sem_banner.png";
