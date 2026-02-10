@@ -170,6 +170,18 @@
 
 /* Responsive */
 @media screen and (max-width: 900px) {
+    .navbar-section {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .navbar-logo {
+        height: 45px;
+    }
+
+    .navbar-sign {
+        font-size: 28px;
+    }
 
     .navbar-btn-link,
     .navbar-btn,

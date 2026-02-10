@@ -406,33 +406,46 @@
 }
 
 @media screen and (max-width: 700px) {
+    .info-section {
+        padding: 50px 20px;
+    }
+
     .info-title {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .info-description {
-        margin: 64px 24px;
+        margin: 30px 0;
         font-size: 16px;
+        line-height: 1.6;
     }
 
     .info-cards-content {
         grid-template-columns: repeat(1, 1fr);
+        margin: 30px 0;
+        gap: 20px;
     }
 
     .info-card-title {
-        font-size: 22px;
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    .info-card-description {
+        margin: 15px 20px 25px;
+        font-size: 15px;
     }
 
     .info-title span::before {
         left: 50%;
-        transform: translateX(calc(-50% + 20px));
         width: 60%;
     }
 
     .info-split-section {
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
+        padding: 30px 0 50px;
     }
 
     .split-with-divider::before {
@@ -440,7 +453,13 @@
     }
 
     .info-split-text h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 15px;
+    }
+
+    .info-split-text p {
+        font-size: 1rem;
+        margin-bottom: 15px;
     }
 
     .info-check-list,
@@ -448,7 +467,31 @@
         grid-template-columns: 1fr;
     }
 
+    .info-sub-section {
+        padding: 50px 0;
+    }
+
+    .info-sub-section-title {
+        font-size: 1.75rem;
+        margin-bottom: 40px;
+    }
+
+    .info-cta-card {
+        padding: 40px 20px;
+        margin: 50px 0;
+    }
+
     .info-cta-card h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .info-cta-card p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .info-cta-btn {
+        padding: 15px 35px;
+        font-size: 1rem;
     }
 }

@@ -216,81 +216,79 @@
 /* Responsive */
 @media screen and (max-width: 700px) {
     .footer-container {
-        padding: 24px;
+        padding: 40px 20px;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .ft-title {
-        font-size: 24px;
-    }
-
+    .ft-title,
     .ft-sign {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .ft-description {
         width: 100%;
         margin: 16px 0 24px;
-        font-size: 14px;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .ft-input-title {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .ft-input {
         width: 100%;
         margin: 16px 0;
-        font-size: 14px;
+        font-size: 15px;
     }
 
-    .ft-btn {
-        width: 100%;
-        margin: 0 0 16px;
-        font-size: 16px;
-    }
-
+    .ft-btn,
     .newsletter-subscribe-btn {
         width: 100%;
-        margin: 0 0 24px;
+        margin: 0 0 20px;
         font-size: 16px;
         padding: 14px 24px;
     }
 
     .ft-list-title {
-        font-size: 18px;
+        font-size: 20px;
+        margin-top: 30px;
     }
 
     .ft-list-items li {
-        font-size: 14px;
+        margin: 15px 0;
+        font-size: 15px;
     }
 
     .ft-copyright {
-        padding: 18px;
-        display: block;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         text-align: center;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .ft-copyright>p {
-        transform: translateX(24px);
+        justify-self: center;
+        transform: none;
+        order: 2;
+    }
+
+    .ft-social-links {
+        justify-self: center;
+        transform: none;
+        order: 1;
+        margin: 0;
+    }
+
+    .ft-developer {
+        order: 3;
     }
 
     .ft-mobile-break {
         display: block;
-    }
-
-    .ft-social-links {
-        margin: 16px 0 0;
-        transform: translateX(-100px);
-    }
-
-    .ft-social-links li a {
-        width: 30px;
-        height: 30px;
-    }
-
-    .ft-social-links li a svg {
-        width: 16px;
-        height: 16px;
     }
 }

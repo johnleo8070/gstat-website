@@ -38,7 +38,6 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            style={{ color: '#FF8C00', fontSize: '1.8rem', fontWeight: 'bold' }}
           >
             🚀 GSTAT MOBILE SOLUTIONS
           </motion.p>

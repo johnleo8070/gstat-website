@@ -527,18 +527,157 @@
     transform: translateY(-5px);
 }
 
+/* Testimonials Section Modern */
+.home-testimonials-section {
+    padding: 80px 40px;
+    background: #ffffff;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #f8fbff;
+    padding: 40px;
+    border-radius: 25px;
+    border-left: 6px solid #1a8efd;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card.orange {
+    border-left-color: #FF8C00;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(26, 142, 253, 0.1);
+}
+
+.testimonial-quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    color: #0d4275;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+/* CTA Section Modern */
+.home-cta-section {
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #1a8efd 0%, #0d4275 100%);
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.home-cta-content {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.home-cta-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.home-cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+.home-cta-btn {
+    background: #ffffff;
+    color: #1a8efd;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-cta-btn:hover {
+    transform: scale(1.05) translateY(-3px);
+    background: #FF8C00;
+    color: white;
+    box-shadow: 0 15px 30px rgba(255, 140, 0, 0.4);
+}
+
 /* Responsive fixes for new sections */
+@media screen and (max-width: 992px) {
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-cta-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .home-content-container {
+        padding: 30px 20px;
+    }
 
     .process-section,
-    .why-choose-modern-section {
-        padding: 60px 20px;
+    .why-choose-modern-section,
+    .home-testimonials-section,
+    .industries-marquee-section {
+        padding: 40px 20px;
+    }
+
+    .highlights-section {
+        margin-bottom: 30px;
+    }
+
+    .home-services-grid {
+        margin-bottom: 40px;
     }
 
     .modern-process-grid,
-    .why-choose-modern-grid {
+    .why-choose-modern-grid,
+    .testimonial-container,
+    .highlights-grid,
+    .home-services-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
     }
 
     .why-card-modern {
@@ -549,6 +688,9 @@
 
     .why-icon-wrapper {
         margin: 0 auto 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
 
     .why-card-modern h3 {
@@ -561,47 +703,129 @@
 
     .marquee-content {
         animation: marquee 20s linear infinite;
-        gap: 20px;
+        gap: 15px;
     }
 
     .industry-badge {
-        padding: 10px 25px;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .content-section-title h2 {
+        font-size: 26px;
+    }
+
+    /* Testimonials & CTA Mobile Fixes */
+    .testimonial-card {
+        padding: 24px 20px;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .home-cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .home-cta-section p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .home-cta-btn {
+        padding: 12px 30px;
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .highlights-grid {
+
+    .highlights-grid,
+    .home-services-grid,
+    .testimonial-container,
+    .modern-process-grid,
+    .why-choose-modern-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .content-section-title h2 {
         font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .content-section-title {
+        margin-bottom: 30px;
     }
 
     .why-choose-modern-section {
-        padding: 50px 15px;
+        padding: 40px 15px;
     }
 
     .why-card-modern {
         padding: 25px 20px;
     }
 
+    .highlight-card {
+        padding: 25px 20px;
+    }
+
     .highlight-card h3 {
-        font-size: 17px;
+        font-size: 18px;
+    }
+
+    .home-service-card {
+        padding: 30px 25px;
     }
 
     .home-service-card h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .home-service-card p,
     .highlight-card p,
     .condition-name {
         font-size: 14px;
+        line-height: 1.5;
     }
 
     .approach-text h2 {
-        font-size: 22px !important;
+        font-size: 20px !important;
+    }
+
+    .testimonial-card {
+        padding: 10px 12px;
+    }
+
+    .testimonial-quote {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+    }
+
+    .author-info h4 {
+        font-size: 0.85rem;
+    }
+
+    .author-info p {
+        font-size: 0.7rem;
+    }
+
+    .home-cta-section {
+        padding: 50px 20px;
+    }
+
+    .home-cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .home-cta-btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
     }
 }

@@ -207,33 +207,80 @@ function HomeContent() {
                 </div>
             </section>
 
-            {/* 6. Testimonials */}
-            <section className="highlights-section">
+            {/* 6. Testimonials Section */}
+            <section className="home-testimonials-section">
                 <div className="content-section-title">
-                    <h2>Testimonials</h2>
+                    <h2>What Our Clients Say</h2>
+                    <div className="title-underline"></div>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
-                    <div style={{ padding: '20px', background: 'white', borderLeft: '5px solid #1E8FFD', borderRadius: '5px' }}>
-                        <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#555' }}>“GSTAT MOBILE SOLUTIONS transformed our online presence. Our sales doubled within months.”</p>
-                        <p style={{ marginTop: '10px', fontWeight: 'bold', color: '#333' }}>— Business Owner</p>
-                    </div>
-                    <div style={{ padding: '20px', background: 'white', borderLeft: '5px solid #FF8C00', borderRadius: '5px' }}>
-                        <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#555' }}>“Their SMS and digital marketing campaigns deliver real results.”</p>
-                        <p style={{ marginTop: '10px', fontWeight: 'bold', color: '#333' }}>— Marketing Manager</p>
-                    </div>
+
+                <div className="testimonial-container">
+                    <motion.div
+                        className="testimonial-card"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <p className="testimonial-quote">
+                            "GSTAT MOBILE SOLUTIONS transformed our online presence. Their data-driven approach to SEO and social media marketing helped our sales double within months."
+                        </p>
+                        <div className="testimonial-author">
+                            <div className="author-info">
+                                <h4>Samuel Adeniyi</h4>
+                                <p>CEO, TechAdvance Nigeria</p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        className="testimonial-card orange"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <p className="testimonial-quote">
+                            "The bulk SMS and digital marketing campaigns they executed for us were flawless. We saw immediate engagement and a significant ROI. Highly recommended!"
+                        </p>
+                        <div className="testimonial-author">
+                            <div className="author-info">
+                                <h4>Blessing Chima</h4>
+                                <p>Marketing Manager, RetailFlow</p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
-
-            {/* 7. CTA */}
-            <section className="cta-section" style={{ textAlign: 'center', padding: '80px 20px', background: 'linear-gradient(135deg, #1E8FFD 0%, #0056b3 100%)', color: 'white' }}>
-                <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>Ready to Grow Your Business Digitally?</h2>
-                <p style={{ fontSize: '20px', marginBottom: '40px', maxWidth: '700px', margin: '0 auto 40px' }}>Partner with GSTAT MOBILE SOLUTIONS today and unlock the full power of digital marketing. Contact Us Now for a free consultation.</p>
-                <Link to="/quotation">
-                    <button style={{ padding: '15px 40px', fontSize: '18px', fontWeight: 'bold', color: '#1E8FFD', background: 'white', border: 'none', borderRadius: '30px', cursor: 'pointer', transition: 'transform 0.2s' }}>
-                        Get Started
-                    </button>
-                </Link>
+            {/* 7. Call to Action Section */}
+            <section className="home-cta-section">
+                <div className="home-cta-content">
+                    <motion.h2
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        Ready to Dominate Your Industry Online?
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        Partner with GSTAT MOBILE SOLUTIONS today and unlock the full growth potential of your business. Let's build your digital success story together.
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                    >
+                        <Link to="/quotation" className="home-cta-btn">
+                            Get Your Free Quote Now
+                        </Link>
+                    </motion.div>
+                </div>
             </section>
         </div>
     );
