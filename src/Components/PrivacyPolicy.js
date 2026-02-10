@@ -8,29 +8,24 @@ const PrivacyPolicy = () => {
       <div className="legal-text-content">
         <h1 className="legal-title">Privacy Policy</h1>
         <p className="legal-description">
-          Albright Clinic ("we," "us," or "our") is committed to protecting your privacy and safeguarding your personal and health information. 
-          This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our website or use our mental health 
-          and behavioral health services.
+          GSTAT MOBILE SOLUTIONS ("we," "us," or "our") is committed to protecting your privacy and guarding your personal information.
+          This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our website or use our
+          digital marketing and technology services.
         </p>
 
         <h2 className="legal-subtitle">1. Information We Collect</h2>
         <p className="legal-description">
           We may collect the following types of information:
         </p>
-        
+
         <h3 className="legal-subsection">Personal Information</h3>
         <ul className="legal-list">
           <li>Name</li>
           <li>Phone number</li>
           <li>Email address</li>
-          <li>Appointment details</li>
+          <li>Business details</li>
+          <li>Project requirements</li>
         </ul>
-
-        <h3 className="legal-subsection">Health Information</h3>
-        <p className="legal-description">
-          Health information is collected only when you become a patient and is protected under applicable healthcare 
-          privacy laws, including HIPAA.
-        </p>
 
         <h3 className="legal-subsection">Website Usage Information</h3>
         <ul className="legal-list">
@@ -46,9 +41,9 @@ const PrivacyPolicy = () => {
         <h2 className="legal-subtitle">2. How We Use Your Information</h2>
         <p className="legal-description">We use your information to:</p>
         <ul className="legal-list">
-          <li>Schedule and manage appointments</li>
-          <li>Provide mental health and behavioral services</li>
+          <li>Provide and manage our services</li>
           <li>Respond to inquiries and requests</li>
+          <li>Send administrative information</li>
           <li>Improve our website and services</li>
           <li>Comply with legal and regulatory requirements</li>
         </ul>
@@ -60,7 +55,7 @@ const PrivacyPolicy = () => {
         <ul className="legal-list">
           <li>With your explicit consent</li>
           <li>To comply with legal obligations</li>
-          <li>To protect the rights and safety of our patients and others</li>
+          <li>To protect the rights and safety of our clients and others</li>
           <li>With service providers who assist in our operations</li>
         </ul>
 
@@ -79,9 +74,9 @@ const PrivacyPolicy = () => {
         <p className="legal-description">
           If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
           <br /><br />
-          <strong>Email:</strong> bookings@albrightclinic.com<br />
-          <strong>Phone:</strong> +1 (713) 624-0727<br />
-          <strong>Address:</strong> 20711 Slate CT, RICHMOND TX 77407
+          <strong>Email:</strong> info@gstatmobile.com<br />
+          <strong>Phone:</strong> 090 6434 2047<br />
+          <strong>Address:</strong> 6, Trimnell Street, Aguda, Surulere, Lagos.
         </p>
 
         <p className="legal-update">

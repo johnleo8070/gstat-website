@@ -3,132 +3,88 @@ export const faqData = [
         category: "General FAQ",
         questions: [
             {
-                question: "What services does Albright Clinic offer?",
-                answer: "Albright Clinic offers comprehensive mental health and behavioral services, including psychiatric evaluations, medication management, individual therapy, and behavioral health care for adolescents and adults in Richmond, Texas."
+                question: "What services does GSTAT MOBILE SOLUTIONS offer?",
+                answer: "We provide a full suite of digital marketing and technology solutions, including Social Media Marketing, Website Development, Mobile App Development, Bulk SMS, Voice SMS, Email Marketing, and Search Engine Marketing (SEM)."
             },
             {
-                question: "What conditions are treated at Albright Clinic?",
-                answer: "Albright Clinic treats anxiety, depression, ADHD, bipolar disorder, PTSD, mood disorders, stress-related conditions, sleep disorders, and other behavioral and emotional health concerns."
+                question: "How can digital marketing help my business grow?",
+                answer: "Digital marketing increases your online visibility, engages your target audience, drives traffic to your website/app, generates qualified leads, and helps boost sales with measurable results."
             },
             {
-                question: "Do you offer psychiatric evaluations in Richmond, Texas?",
-                answer: "Yes. Albright Clinic provides comprehensive psychiatric evaluations in Richmond, TX to assess mental health symptoms, diagnose conditions, and develop personalized treatment plans."
+                question: "Do you offer consultations for new businesses?",
+                answer: "Yes, we provide free consultations to understand your business goals and recommend the most effective digital strategies tailored to your needs."
             },
             {
-                question: "Is medication management available at Albright Clinic?",
-                answer: "Yes. We offer professional psychiatric medication management, including prescribing, monitoring, and adjusting medications to ensure safe and effective mental health treatment."
-            },
-            {
-                question: "Do you provide therapy services?",
-                answer: "Yes. Albright Clinic provides individual therapy sessions designed to help patients manage emotional challenges, develop coping skills, and improve overall mental well-being."
-            },
-            {
-                question: "Do you treat both adults and adolescents?",
-                answer: "Yes. Albright Clinic offers mental health services for both adults and adolescents, with age-appropriate care tailored to each patient’s emotional and developmental needs."
-            },
-            {
-                question: "Is mental health treatment confidential?",
-                answer: "Yes. All mental health and behavioral services at Albright Clinic are provided in a confidential and secure environment in accordance with healthcare privacy standards."
-            },
-            {
-                question: "How do I schedule an appointment at Albright Clinic?",
-                answer: "You can schedule an appointment by contacting Albright Clinic directly through our website or phone. Appointments are required for all services."
-            },
-            {
-                question: "Do you accept new patients?",
-                answer: "Yes. Albright Clinic is currently accepting new patients for mental health and behavioral health services in Richmond, Texas."
-            },
-            {
-                question: "Is Albright Clinic a psychiatry clinic?",
-                answer: "Yes. Albright Clinic is a mental health and behavioral health clinic providing psychiatric services, including evaluations and medication management, in Richmond, TX."
-            },
-            {
-                question: "What should I expect during my first visit?",
-                answer: "During your first visit, a licensed mental health professional will conduct a comprehensive evaluation, discuss your concerns, review your history, and recommend a personalized treatment plan."
+                question: "Why should I choose GSTAT MOBILE SOLUTIONS?",
+                answer: "We focus on measurable growth and real business results. Our team combines creativity with data-driven strategies to position your brand for digital success at affordable rates."
             }
         ]
     },
     {
-        category: "Anxiety Treatment FAQs",
+        category: "Web & Mobile Development",
         questions: [
             {
-                question: "What is anxiety disorder?",
-                answer: "Anxiety disorder is a mental health condition characterized by excessive worry, fear, or nervousness that interferes with daily activities, relationships, or work."
+                question: "Do you create custom websites and mobile apps?",
+                answer: "Yes! We design responsive, SEO-optimized websites and mobile applications (iOS and Android) customized to your business needs, ensuring a seamless user experience and high performance."
             },
             {
-                question: "How do I know if I have anxiety?",
-                answer: "Common signs of anxiety include constant worry, restlessness, racing thoughts, difficulty sleeping, muscle tension, and feeling overwhelmed without clear cause."
+                question: "How long does it take to build a website or app?",
+                answer: "The timeline depends on the project scope. Business websites typically take 1-3 weeks, while complex eCommerce platforms or custom mobile apps may take 4-8 weeks."
             },
             {
-                question: "Can anxiety be treated without medication?",
-                answer: "Yes. Anxiety can often be treated with therapy, lifestyle changes, and coping strategies. Medication may be recommended depending on symptom severity and individual needs."
-            },
-            {
-                question: "Where can I get anxiety treatment in Richmond, Texas?",
-                answer: "You can receive professional anxiety treatment at Albright Clinic in Richmond, TX through psychiatric evaluation, therapy, and personalized care plans."
+                question: "Are your websites mobile-friendly and SEO-optimized?",
+                answer: "Absolutely. Every website we build is 100% mobile-responsive and follows SEO best practices to ensure high rankings on search engines like Google."
             }
         ]
     },
     {
-        category: "Depression Treatment FAQs",
+        category: "Bulk SMS & Communication",
         questions: [
             {
-                question: "What is depression?",
-                answer: "Depression is a mental health condition that causes persistent sadness, loss of interest, low energy, and difficulty functioning in daily life."
+                question: "How does bulk SMS marketing work?",
+                answer: "Bulk SMS allows you to send thousands of messages instantly for promotions, notifications, and reminders. Our platform ensures reliable delivery with detailed analytics tracking."
             },
             {
-                question: "What are common symptoms of depression?",
-                answer: "Symptoms of depression include sadness, fatigue, loss of motivation, changes in sleep or appetite, difficulty concentrating, and feelings of hopelessness."
+                question: "What is Voice SMS and how can it benefit me?",
+                answer: "Voice SMS delivers pre-recorded audio messages to phone numbers. It's more personal than text and has higher engagement rates for announcements and political campaigns."
             },
             {
-                question: "How is depression treated?",
-                answer: "Depression is treated using therapy, medication management, or a combination of both, depending on the individual’s symptoms and clinical evaluation."
-            },
-            {
-                question: "Can depression go away with treatment?",
-                answer: "Yes. With proper mental health treatment, many people experience significant improvement in symptoms and regain emotional stability and quality of life."
+                question: "Can I integrate Email, Viber, and SMS into one campaign?",
+                answer: "Yes! GSTAT offers an all-in-one platform where you can design and send marketing campaigns across E-mail, Viber, and SMS from a single interface."
             }
         ]
     },
     {
-        category: "ADHD Treatment FAQs",
+        category: "Digital Marketing & SEM",
         questions: [
             {
-                question: "What is ADHD?",
-                answer: "ADHD, or Attention-Deficit/Hyperactivity Disorder, is a condition that affects focus, impulse control, organization, and attention."
+                question: "Can you manage my social media accounts?",
+                answer: "Yes. We offer complete social media management, including content creation, strategy, and advertising campaigns across Facebook, Instagram, TikTok, LinkedIn, and more."
             },
             {
-                question: "What are symptoms of ADHD in adults and adolescents?",
-                answer: "Symptoms include difficulty focusing, forgetfulness, restlessness, impulsive behavior, poor time management, and trouble completing tasks."
+                question: "What is SEM and how does it deliver results?",
+                answer: "Search Engine Marketing (SEM) uses paid ads to place your business at the top of Google results instantly, targeting users actively searching for your services."
             },
             {
-                question: "How is ADHD diagnosed?",
-                answer: "ADHD is diagnosed through a comprehensive psychiatric evaluation that reviews symptoms, behavior patterns, and medical history."
-            },
-            {
-                question: "Is ADHD treatable?",
-                answer: "Yes. ADHD is highly treatable through medication management, behavioral strategies, therapy, and structured treatment plans."
+                question: "How long does it take to see results?",
+                answer: "Paid campaigns (Google Ads, Social Ads) show immediate results. Organic strategies like SEO and social growth typically take 2-6 months for significant outcomes."
             }
         ]
     },
     {
-        category: "PTSD & Trauma FAQs",
+        category: "Support & Pricing",
         questions: [
             {
-                question: "What is PTSD?",
-                answer: "Post-Traumatic Stress Disorder (PTSD) is a mental health condition that develops after experiencing or witnessing a traumatic event."
+                question: "What is the cost of your services?",
+                answer: "Pricing varies by project scope. we provide affordable and flexible packages for businesses of all sizes. Contact us for a customized quote and free consultation."
             },
             {
-                question: "What are common PTSD symptoms?",
-                answer: "Symptoms of PTSD include flashbacks, nightmares, anxiety, emotional numbness, irritability, and avoidance of trauma-related triggers."
+                question: "Do you provide reporting and analytics?",
+                answer: "Yes. We provide detailed performance reports and analytics dashboards for all campaigns to ensure transparency and help you track your ROI effectively."
             },
             {
-                question: "Can PTSD be treated successfully?",
-                answer: "Yes. PTSD can be effectively treated with therapy, medication management, and trauma-informed mental health care."
-            },
-            {
-                question: "Where can I get PTSD treatment in Richmond, TX?",
-                answer: "Albright Clinic offers professional PTSD and trauma-related treatment services in Richmond, Texas in a confidential and supportive setting."
+                question: "How can I contact GSTAT MOBILE SOLUTIONS for support?",
+                answer: "You can reach our dedicated support team via email at info@gstatmobile.com or phone/WhatsApp at +234 703 701 8216 or 090 6434 2047."
             }
         ]
     }

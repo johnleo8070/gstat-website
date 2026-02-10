@@ -63,7 +63,7 @@ function SubscribeNewsletter() {
         autoComplete="true"
       />
       <button
-        className="text-appointment-btn"
+        className="newsletter-subscribe-btn"
         type="button"
         disabled={isButtonDisabled}
         onClick={handleBookAppointmentClick}

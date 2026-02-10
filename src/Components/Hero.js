@@ -1,41 +1,32 @@
 import React from "react";
-import Doctor from "../Assets/doctor-picture.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarCheck, faAngleUp, faCircleCheck, faClock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faRocket,
+  faArrowRight,
+  faCheckCircle,
+  faGlobe,
+  faMobileAlt,
+  faChartLine
+} from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import HeroImage from "../Assets/hero-home.png";
 import "../Styles/Hero.css";
 
 function Hero() {
   const navigate = useNavigate();
-  const [goUp, setGoUp] = React.useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleGetStartedClick = () => {
+    navigate("/services/social-media-marketing");
   };
 
-  const handleBookAppointmentClick = () => {
-    navigate("/appointment");
+  const handleConsultationClick = () => {
+    navigate("/quotation");
   };
-
-  React.useEffect(() => {
-    const onPageScroll = () => {
-      if (window.scrollY > 600) {
-        setGoUp(true);
-      } else {
-        setGoUp(false);
-      }
-    };
-    window.addEventListener("scroll", onPageScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onPageScroll);
-    };
-  }, []);
 
   return (
-    <div className="section-container">
-      <div className="hero-section">
+    <div className="hero-full-width-container">
+      <div className="hero-section homepage-hero">
         <motion.div
           className="text-section"
           initial={{ opacity: 0, x: -50 }}
@@ -47,8 +38,9 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
+            style={{ color: '#FF8C00', fontSize: '1.8rem', fontWeight: 'bold' }}
           >
-            🧠 Mental Wellness First
+            🚀 GSTAT MOBILE SOLUTIONS
           </motion.p>
           <motion.h2
             className="text-title"
@@ -56,7 +48,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
-            Compassionate Psychiatric & Behavioral Healthcare You Can Trust
+            Digital Marketing Solutions That Drive Real Business Growth
           </motion.h2>
           <motion.p
             className="text-description"
@@ -64,66 +56,102 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Albright Clinic is a leading provider of mental health and behavioral services in Richmond, Texas.
-            We offer comprehensive psychiatric care for adolescents and adults, helping individuals achieve
-            emotional stability, mental clarity, and improved quality of life through personalized,
-            evidence-based treatment.
+            At GSTAT MOBILE SOLUTIONS, we are dedicated to empowering businesses with cutting-edge digital tools
+            and result-driven marketing strategies. Our team of experts specializes in crafting bespoke
+            online experiences—from high-performance web development and innovative mobile apps to
+            data-driven SEO and robust bulk messaging platforms—designed to help you achieve
+            sustainable growth and digital excellence.
           </motion.p>
-          <motion.button
-            className="text-appointment-btn"
-            type="button"
-            onClick={handleBookAppointmentClick}
+
+          <div className="hero-buttons">
+            <motion.button
+              className="text-appointment-btn"
+              type="button"
+              onClick={handleGetStartedClick}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started <FontAwesomeIcon icon={faRocket} />
+            </motion.button>
+            <motion.button
+              className="text-appointment-btn border-btn"
+              type="button"
+              onClick={handleConsultationClick}
+              whileHover={{ scale: 1.05, backgroundColor: '#1E8FFD', color: 'white' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Request Consultation <FontAwesomeIcon icon={faArrowRight} />
+            </motion.button>
+          </div>
+
+          <motion.div
+            className="hero-highlights"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
-          </motion.button>
-          <motion.div
-            className="hero-benefits"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.7 }}
-          >
-            <div className="benefit-item">
-              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
-              <p style={{ color: '#1A8EFD' }}>Same-day appointments available</p>
+            <div className="highlight-item">
+              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
+              <span>Full-Service Digital Marketing & SEO</span>
             </div>
-
-            <div className="benefit-item">
-              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
-              <p style={{ color: '#1A8EFD' }}>Modern facility with caring, experienced staff</p>
+            <div className="highlight-item">
+              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
+              <span>Expert Web & Mobile App Development</span>
             </div>
-
-            <div className="benefit-item">
-              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
-              <p style={{ color: '#1A8EFD' }}>Insurance accepted + transparent pricing</p>
+            <div className="highlight-item">
+              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
+              <span>Bulk SMS & Voice Messaging Solutions</span>
             </div>
-
-            <div className="benefit-item">
-              <FontAwesomeIcon icon={faClock} className="benefit-icon" style={{ color: '#000000' }} />
-              <p style={{ color: '#1A8EFD' }}>24/7 Support</p>
+            <div className="highlight-item">
+              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
+              <span>24/7 Dedicated Support & Consultation</span>
             </div>
           </motion.div>
         </motion.div>
 
         <motion.div
           className="hero-image-section"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img className="hero-image1" src={Doctor} alt="Doctor" />
-        </motion.div>
-      </div>
+          <div className="image-wrapper">
+            <img src={HeroImage} alt="GSTAT Digital Solutions" className="hero-image1" />
 
-      <div
-        onClick={scrollToTop}
-        className={`scroll-up ${goUp ? "show-scroll" : ""}`}
-      >
-        <FontAwesomeIcon icon={faAngleUp} />
+            {/* Floating Elements */}
+            <motion.div
+              className="floating-card stat-card-1"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="stat-icon"><FontAwesomeIcon icon={faCheckCircle} /></div>
+              <div className="stat-info">
+                <h4>500+</h4>
+                <p>Happy Clients</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="floating-card stat-card-2"
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            >
+              <div className="stat-icon secondary"><FontAwesomeIcon icon={faChartLine} /></div>
+              <div className="stat-info">
+                <h4>98%</h4>
+                <p>Success Rate</p>
+              </div>
+            </motion.div>
+
+            {/* Decorative Icons */}
+            <motion.div className="decor-icon icon-globe" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}>
+              <FontAwesomeIcon icon={faGlobe} />
+            </motion.div>
+            <motion.div className="decor-icon icon-mobile" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
+              <FontAwesomeIcon icon={faMobileAlt} />
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

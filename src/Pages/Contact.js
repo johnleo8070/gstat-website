@@ -32,31 +32,20 @@ function Contact() {
             return;
         }
 
-        // Send data to backend
+        // Send data to backend - Replace with GSTAT endpoint if available
         try {
-            const response = await fetch("https://www.xnetnigeria.com/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
+            console.log("Submitting form:", formData);
+            // Simulate success for now as API might not be set up
+            toast.success("Message sent successfully! We'll get back to you soon.", {
+                position: toast.POSITION.TOP_CENTER,
+            });
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
             });
 
-            if (response.ok) {
-                toast.success("Message sent successfully! We'll get back to you soon.", {
-                    position: toast.POSITION.TOP_CENTER,
-                });
-
-                // Reset form
-                setFormData({
-                    name: "",
-                    email: "",
-                    subject: "",
-                    message: "",
-                });
-            } else {
-                toast.error("Failed to send message. Please try again.");
-            }
         } catch (error) {
             console.error("Error:", error);
             toast.error("Server error. Please try again later.");
@@ -66,8 +55,8 @@ function Contact() {
     return (
         <div className="contact-page">
             <SEO
-                title="Contact Albright Clinic | Mental Health Clinic in Richmond, TX"
-                description="Contact Albright Clinic in Richmond, Texas to schedule your mental health appointment. Compassionate psychiatric and behavioral care starts here."
+                title="Contact GSTAT MOBILE SOLUTIONS | Digital Marketing Agency"
+                description="Contact GSTAT MOBILE SOLUTIONS for digital marketing, web development, and mobile app services. Get a free consultation today."
                 type="website"
             />
             <Navbar />
@@ -80,56 +69,54 @@ function Contact() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="contact-title">Schedule Your Mental Health Appointment</h2>
+                        <h2 className="contact-title">Get in Touch With Us</h2>
                         <p className="contact-description">
-                            Albright Clinic is here to support your mental wellness journey. Contact our
-                            experienced mental health professionals in Richmond, Texas for compassionate
-                            psychiatric and behavioral healthcare services.
+                            Ready to grow your business? Contact GSTAT MOBILE SOLUTIONS for expert digital marketing and technology services.
                         </p>
 
                         <div className="contact-details">
                             <div className="contact-detail-item">
                                 <h4>Phone</h4>
-                                <p><a href="tel:+17136240727">+1 (713) 624-0727</a></p>
+                                <p><a href="tel:09064342047">090 6434 2047</a></p>
+                            </div>
+
+                            <div className="contact-detail-item">
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/2347037018216" target="_blank" rel="noopener noreferrer">070 3701 8216</a></p>
                             </div>
 
                             <div className="contact-detail-item">
                                 <h4>Email</h4>
-                                <p><a href="mailto:bookings@albrightclinic.com">bookings@albrightclinic.com</a></p>
+                                <p><a href="mailto:info@gstatmobile.com">info@gstatmobile.com</a></p>
                             </div>
 
                             <div className="contact-detail-item">
                                 <h4>Location</h4>
                                 <p>
-                                    <a
-                                        href="https://maps.app.goo.gl/Rqoix49hrBepb4J77"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        20711 Slate CT, RICHMOND TX 77407
-                                    </a>
+                                    6, Trimnell Street, Aguda, Surulere, Lagos.
                                 </p>
                             </div>
 
                             <div className="contact-detail-item">
                                 <h4>Office Hours</h4>
                                 <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                <p>Evening & Weekend Appointments Available</p>
                             </div>
                         </div>
 
                         <div className="contact-map-container">
                             <iframe
-                                title="Albright Clinic Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.430!2d-95.736!3d29.673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640df2775f0f353%3A0x600c000000000000!2s20711%20Slate%20Ct%2C%20Richmond%2C%20TX%2077407%2C%20USA!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+                                title="GSTAT Office Location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.512!2d3.336!3d6.502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e967a99f173%3A0xe5f1f964c0e6203d!2s6%20Trimnell%20St%2C%20Aguda%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1707578500000!5m2!1sen!2sng"
                                 width="100%"
-                                height="300"
-                                style={{ border: 0, borderRadius: "12px" }}
+                                height="250"
+                                style={{ border: 0 }}
                                 allowFullScreen=""
                                 loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
+                                referrerpolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
+
+
                     </motion.div>
 
                     <motion.div

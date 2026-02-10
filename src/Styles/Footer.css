@@ -83,6 +83,39 @@
     border: 2px solid #1A8EFD;
 }
 
+.newsletter-subscribe-btn {
+    padding: 14px 32px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #1A8EFD 0%, #0d4275 100%);
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .8px;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(26, 142, 253, 0.3);
+    outline: none;
+    margin-top: 20px;
+}
+
+.newsletter-subscribe-btn:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(26, 142, 253, 0.4);
+    background: linear-gradient(135deg, #FF8C00 0%, #cc7000 100%);
+}
+
+.newsletter-subscribe-btn:active:not(:disabled) {
+    transform: translateY(-1px) scale(1);
+}
+
+.newsletter-subscribe-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    filter: grayscale(0.8);
+    transform: none;
+}
+
 /* Lists */
 .ft-list-title {
     margin: 16px 0;
@@ -214,6 +247,13 @@
         width: 100%;
         margin: 0 0 16px;
         font-size: 16px;
+    }
+
+    .newsletter-subscribe-btn {
+        width: 100%;
+        margin: 0 0 24px;
+        font-size: 16px;
+        padding: 14px 24px;
     }
 
     .ft-list-title {

@@ -143,7 +143,7 @@
 .content-section-title .title-underline {
     width: 80px;
     height: 4px;
-    background: #1a8efd;
+    background: #FF8C00;
     margin: 0 auto;
     border-radius: 2px;
 }
@@ -217,7 +217,7 @@
 
 .home-service-icon {
     font-size: 36px;
-    color: #1a8efd;
+    color: #FF8C00;
     margin-bottom: 20px;
 }
 
@@ -231,308 +231,342 @@
     color: #555;
     line-height: 1.6;
     font-size: 15px;
+    margin-bottom: 25px;
+    /* Add space for the button */
+    flex-grow: 1;
 }
 
-/* Conditions Section */
-.conditions-section {
-    background: #f8fbff;
-    padding: 80px 40px;
-    border-radius: 40px;
-    margin-bottom: 80px;
+.home-service-read-more {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a8efd;
+    transition: all 0.3s ease;
+    margin-top: auto;
     position: relative;
-    overflow: hidden;
+    z-index: 2;
 }
 
-.conditions-grid {
+.home-service-card:hover .home-service-read-more {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Why Choose Us Modern */
+.why-choose-modern-section {
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+.why-choose-modern-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto 0;
 }
 
-.condition-item {
-    height: 100%;
-}
-
-.condition-card {
+.why-card-modern {
     background: #ffffff;
-    padding: 40px 30px;
+    padding: 40px;
     border-radius: 20px;
+    border: 1px solid rgba(26, 142, 253, 0.1);
+    transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid #eef2f6;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-    color: inherit;
-    height: 100%;
+    align-items: flex-start;
+    text-align: left;
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-/* Pulse and Fill Animation Effect */
-.condition-card::before {
+.why-card-modern::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     width: 0;
     height: 0;
-    background: linear-gradient(135deg, #1a8efd 0%, #0d6efd 100%);
+    background: #1a8efd;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.5s ease-out, height 0.5s ease-out, border-radius 0.3s ease-in 0.2s;
     z-index: -1;
 }
 
-.condition-card:hover::before {
+.why-card-modern:hover::before {
     width: 250%;
     height: 600px;
     border-radius: 0;
 }
 
-.condition-card:hover {
+.why-card-modern:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(26, 142, 253, 0.25);
     border-color: #1a8efd;
+    box-shadow: 0 20px 40px rgba(26, 142, 253, 0.2);
 }
 
-/* Icon, Title, Description, Button - all above the animation */
-.condition-icon,
-.condition-card h3,
-.condition-card p,
-.condition-read-more {
+.why-card-modern h3,
+.why-card-modern p,
+.why-icon-wrapper {
     position: relative;
     z-index: 2;
     transition: all 0.4s ease;
 }
 
-.condition-icon {
-    font-size: 42px;
+.why-card-modern:hover h3,
+.why-card-modern:hover p {
+    color: #ffffff;
+}
+
+.why-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #f0f8ff;
     color: #1a8efd;
-    margin-bottom: 20px;
-    transition: all 0.4s ease;
-}
-
-.condition-card:hover .condition-icon {
-    color: #ffffff;
-    transform: scale(1.1);
-}
-
-.condition-card h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #0d4275;
-    margin-bottom: 15px;
-    line-height: 1.3;
-}
-
-.condition-card:hover h3 {
-    color: #ffffff;
-}
-
-.condition-card p {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    flex-grow: 1;
-}
-
-.condition-card:hover p {
-    color: rgba(255, 255, 255, 0.95);
-}
-
-.condition-read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 28px;
-    background: #0d4275;
-    color: #ffffff;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.4s ease;
-}
-
-.condition-card:hover .condition-read-more {
-    background: #ffffff;
-    color: #1a8efd;
-    transform: scale(1.05);
-}
-
-/* Approach Section */
-.approach-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-    margin-bottom: 80px;
-}
-
-.approach-text {
-    flex: 1 1 500px;
-}
-
-.approach-points {
-    margin-top: 30px;
-}
-
-.approach-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-
-.approach-icon-box {
-    width: 45px;
-    height: 45px;
-    background: #e7f3ff;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+.why-card-modern:hover .why-icon-wrapper {
+    background: #ffffff;
     color: #1a8efd;
-    flex-shrink: 0;
+    transform: rotate(10deg);
 }
 
-.approach-item h4 {
-    font-size: 18px;
+.why-card-modern h3 {
+    font-size: 1.4rem;
     color: #0d4275;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.approach-item p {
-    font-size: 14px;
-    color: #666;
+.why-card-modern p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
-/* Why Choose Section */
-.why-choose-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.why-feature {
-    flex: 1 1 calc(33.333% - 20px);
-    min-width: 280px;
+/* Process Section */
+.process-section {
+    padding: 80px 40px;
     background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid #eef2f6;
 }
 
-.why-feature .icon-circle {
-    width: 40px;
-    height: 40px;
+.section-subtitle {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.modern-process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.modern-process-card {
+    background: #f8fbff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+    border: 1px solid #eef2f6;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.modern-process-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
     background: #1a8efd;
-    color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease-out, height 0.5s ease-out, border-radius 0.3s ease-in 0.2s;
+    z-index: -1;
+}
+
+.modern-process-card:hover::before {
+    width: 250%;
+    height: 600px;
+    border-radius: 0;
+}
+
+.modern-process-card:hover {
+    transform: translateY(-10px);
+    background: transparent;
+    box-shadow: 0 15px 35px rgba(26, 142, 253, 0.2);
+    border-color: #1a8efd;
+}
+
+.modern-process-card h4,
+.modern-process-card p,
+.process-number,
+.process-icon-box {
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.modern-process-card:hover h4,
+.modern-process-card:hover p,
+.modern-process-card:hover .process-number {
+    color: #ffffff;
+}
+
+.process-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(26, 142, 253, 0.05);
+    line-height: 1;
+}
+
+.modern-process-card:hover .process-number {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.process-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #ffffff;
+    color: #1a8efd;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    font-size: 14px;
+    font-size: 1.8rem;
+    margin: 0 auto 25px;
+    box-shadow: 0 5px 15px rgba(26, 142, 253, 0.1);
 }
 
-.why-feature p {
-    font-size: 15px;
+.modern-process-card:hover .process-icon-box {
+    background: #ffffff;
+    color: #1a8efd;
+    transform: scale(1.1);
+}
+
+.modern-process-card h4 {
+    font-size: 1.4rem;
+    color: #0d4275;
+    margin-bottom: 12px;
+}
+
+.modern-process-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Industries Marquee */
+.industries-marquee-section {
+    padding: 80px 0;
+    background: #f0f8ff;
+    overflow: hidden;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    gap: 30px;
+    padding: 20px 0;
+    width: fit-content;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.industry-badge {
+    background: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     color: #333;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(26, 142, 253, 0.1);
+    transition: all 0.3s ease;
 }
 
-/* Responsive */
-@media screen and (max-width: 1024px) {
-    .home-content-container {
-        padding: 40px 20px;
-    }
+.industry-badge:hover {
+    background: #1a8efd;
+    color: #fff;
+    transform: translateY(-5px);
 }
 
+/* Responsive fixes for new sections */
 @media screen and (max-width: 768px) {
-    .home-content-container {
-        padding: 30px 15px;
+
+    .process-section,
+    .why-choose-modern-section {
+        padding: 60px 20px;
     }
 
-    .content-section-title {
-        margin-bottom: 30px;
-    }
-
-    .content-section-title h2 {
-        font-size: 26px;
-    }
-
-    .highlights-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .highlight-card {
-        padding: 20px;
-    }
-
-    .highlight-card h3 {
-        font-size: 18px;
-    }
-
-    .home-services-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .home-service-card {
-        padding: 30px;
-    }
-
-    .home-service-card h3 {
-        font-size: 20px;
-    }
-
-    .conditions-section {
-        padding: 40px 20px;
-        border-radius: 20px;
-    }
-
-    .conditions-grid {
+    .modern-process-grid,
+    .why-choose-modern-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .condition-card {
-        padding: 35px 25px;
+    .why-card-modern {
+        padding: 30px 25px;
+        align-items: center;
+        text-align: center;
     }
 
-    .condition-icon {
-        font-size: 36px;
+    .why-icon-wrapper {
+        margin: 0 auto 20px;
     }
 
-    .condition-card h3 {
-        font-size: 20px;
+    .why-card-modern h3 {
+        font-size: 1.25rem;
     }
 
-    .condition-card p {
-        font-size: 14px;
+    .why-card-modern p {
+        font-size: 1rem;
     }
 
-    .condition-read-more {
-        font-size: 13px;
-        padding: 10px 24px;
+    .marquee-content {
+        animation: marquee 20s linear infinite;
+        gap: 20px;
     }
 
-    .approach-text h2 {
-        font-size: 26px !important;
-    }
-
-    .why-feature {
-        flex: 1 1 100%;
+    .industry-badge {
+        padding: 10px 25px;
+        font-size: 1rem;
     }
 }
 
@@ -543,6 +577,14 @@
 
     .content-section-title h2 {
         font-size: 22px;
+    }
+
+    .why-choose-modern-section {
+        padding: 50px 15px;
+    }
+
+    .why-card-modern {
+        padding: 25px 20px;
     }
 
     .highlight-card h3 {

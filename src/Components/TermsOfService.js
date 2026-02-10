@@ -12,38 +12,31 @@ function TermsOfService() {
       <div className="legal-text-content">
         <h1 className="legal-title">Terms of Service</h1>
         <p className="legal-description">
-          Welcome to Albright Clinic. These Terms of Service ("Terms") govern your access to and use of our
-          website, services, and any related content provided by Albright Clinic ("we," "us," or "our"). By accessing
+          Welcome to GSTAT MOBILE SOLUTIONS. These Terms of Service ("Terms") govern your access to and use of our
+          website, services, and any related content provided by GSTAT MOBILE SOLUTIONS ("we," "us," or "our"). By accessing
           our website or using our services, you agree to be bound by these Terms.
         </p>
 
         <h2 className="legal-subtitle">1. Use of Website</h2>
         <p className="legal-description">
-          The content on this website is provided for general informational purposes only and is not intended as
-          medical advice, diagnosis, or treatment. Use of this website does not create a doctor-patient
-          relationship between you and Albright Clinic.
+          The content on this website is provided for general informational purposes only. Use of this website does not create a client-agency
+          relationship between you and GSTAT MOBILE SOLUTIONS until a formal agreement is made.
         </p>
         <p className="legal-description">
           You agree to use this website only for lawful purposes and in a manner that does not infringe the rights
           of others or restrict their use of the website.
         </p>
 
-        <h2 className="legal-subtitle">2. Medical Disclaimer</h2>
+        <h2 className="legal-subtitle">2. Services</h2>
         <p className="legal-description">
-          All mental health and behavioral services provided by Albright Clinic are delivered only after a formal
-          intake process and scheduled appointment. Information on this website should not be relied upon as a
-          substitute for professional medical advice.
-        </p>
-        <p className="legal-description">
-          If you are experiencing a mental health emergency, call 911 or your local emergency number
-          immediately.
+          Services provided by GSTAT MOBILE SOLUTIONS are subject to specific agreements and contracts.
+          We strive to provide accurate information, but we do not warrant that service descriptions or other content are accurate, complete, reliable, current, or error-free.
         </p>
 
-        <h2 className="legal-subtitle">3. Appointments and Services</h2>
+        <h2 className="legal-subtitle">3. Appointments and Consultations</h2>
         <p className="legal-description">
-          Appointments with Albright Clinic are by scheduling only. Availability of services may vary and is subject
-          to change without notice. We reserve the right to refuse or discontinue services at our discretion, in
-          accordance with applicable laws and ethical guidelines.
+          Consultations with GSTAT MOBILE SOLUTIONS are by scheduling only. Availability of services may vary and is subject
+          to change without notice. We reserve the right to refuse or discontinue services at our discretion.
         </p>
 
         <h2 className="legal-subtitle">4. User Responsibilities</h2>
@@ -60,14 +53,14 @@ function TermsOfService() {
 
         <h2 className="legal-subtitle">5. Intellectual Property</h2>
         <p className="legal-description">
-          All content on this website, including text, graphics, logos, and images, is the property of Albright Clinic
+          All content on this website, including text, graphics, logos, and images, is the property of GSTAT MOBILE SOLUTIONS
           and is protected by copyright and other intellectual property laws. Unauthorized use of any content may
           violate copyright, trademark, and other laws.
         </p>
 
         <h2 className="legal-subtitle">6. Limitation of Liability</h2>
         <p className="legal-description">
-          Albright Clinic shall not be liable for any direct, indirect, incidental, special, or consequential damages
+          GSTAT MOBILE SOLUTIONS shall not be liable for any direct, indirect, incidental, special, or consequential damages
           resulting from the use or inability to use the website or services, even if we have been advised of the
           possibility of such damages.
         </p>
@@ -82,9 +75,9 @@ function TermsOfService() {
         <p className="legal-description">
           If you have any questions about these Terms, please contact us at:
           <br /><br />
-          <strong>Email:</strong> bookings@albrightclinic.com<br />
-          <strong>Phone:</strong> +1 (713) 624-0727<br />
-          <strong>Address:</strong> 20711 Slate CT, RICHMOND TX 77407
+          <strong>Email:</strong> info@gstatmobile.com<br />
+          <strong>Phone:</strong> 090 6434 2047<br />
+          <strong>Address:</strong> 6, Trimnell Street, Aguda, Surulere, Lagos.
         </p>
 
         <p className="legal-update">

@@ -17,7 +17,7 @@ const SEO = ({ title, description, name, type }) => {
             { /* End Facebook tags */}
 
             { /* Twitter tags */}
-            <meta name="twitter:creator" content={name || 'Albright Clinic'} />
+            <meta name="twitter:creator" content={name || 'GSTAT MOBILE SOLUTIONS'} />
             <meta name="twitter:card" content={type || 'summary'} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />

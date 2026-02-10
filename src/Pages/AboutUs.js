@@ -9,8 +9,8 @@ function AboutUs() {
     return (
         <div className="about-page">
             <SEO
-                title="About Albright Clinic | Trusted Mental Health Clinic in Richmond, Texas"
-                description="Learn about Albright Clinic, a leading mental health and behavioral services provider in Richmond, TX. Compassionate care, expert psychiatry, patient-focused treatment."
+                title="About GSTAT MOBILE SOLUTIONS | Leading Digital Agency in Nigeria"
+                description="Learn about GSTAT MOBILE SOLUTIONS, a premier digital marketing and technology agency in Lagos, Nigeria. We provide expert web design, mobile apps, and marketing strategies."
                 type="website"
             />
             <Navbar />

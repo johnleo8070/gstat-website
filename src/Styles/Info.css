@@ -1,7 +1,70 @@
 .info-section {
-    padding: 0 32px;
+    padding: 80px 32px;
     text-align: center;
     background-color: white;
+}
+
+.section-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Split Section (Text + Image) */
+.info-split-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 0 80px;
+    text-align: left;
+    position: relative;
+}
+
+.split-with-divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background: rgba(13, 66, 117, 0.1);
+    transform: translateX(-50%);
+}
+
+.info-split-text {
+    flex: 1;
+    width: 100%;
+}
+
+.info-split-image {
+    flex: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(13, 66, 117, 0.1);
+}
+
+.info-split-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.info-split-image:hover img {
+    transform: scale(1.05);
+}
+
+.info-split-text h2 {
+    font-size: 2.5rem;
+    color: #0d4275;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.info-split-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .info-title-content {
@@ -142,6 +205,195 @@
     /* Keep icon blue, but wrapper turns white */
 }
 
+/* Feature Details List */
+.feature-details-list {
+    list-style: none;
+    padding: 0 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.feature-details-list li {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.4s ease;
+}
+
+.info-cards:hover .feature-details-list li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-details-list li i {
+    color: #1a8efd;
+}
+
+.info-cards:hover .feature-details-list li i {
+    color: #FF8C00;
+}
+
+/* Industries & Process Common */
+.info-sub-section {
+    padding: 80px 0;
+}
+
+.info-sub-section-title {
+    font-size: 2.2rem;
+    color: #0d4275;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.info-sub-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #FF8C00;
+    border-radius: 2px;
+}
+
+/* Icon Checklist Style */
+.info-check-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.info-check-list li {
+    background: #f8fbff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    color: #0d4275;
+    transition: all 0.3s ease;
+}
+
+.info-check-list li:hover {
+    background: #1a8efd;
+    color: #ffffff;
+    transform: translateX(10px);
+}
+
+/* Process Icons Row */
+.process-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.process-pill {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #0d4275;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.process-pill:hover {
+    background: #1a8efd;
+    color: white;
+    border-color: #1a8efd;
+    transform: translateY(-5px);
+}
+
+/* Symmetric Industry Grid */
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.industry-item {
+    background: #ffffff;
+    border: 1px solid rgba(26, 142, 253, 0.1);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    color: #0d4275;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.industry-item:hover {
+    background: #1a8efd;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 142, 253, 0.1);
+}
+
+.industry-item svg {
+    color: #1a8efd;
+    transition: color 0.3s ease;
+}
+
+.industry-item:hover svg {
+    color: #ffffff;
+}
+
+/* CTA Card */
+.info-cta-card {
+    background: linear-gradient(135deg, #0d4275, #1a8efd);
+    border-radius: 30px;
+    padding: 60px 40px;
+    color: white;
+    margin: 80px 0;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(26, 142, 253, 0.3);
+}
+
+.info-cta-card h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.info-cta-card p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 35px;
+}
+
+.info-cta-btn {
+    padding: 18px 45px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.info-cta-btn:hover {
+    background: #ffffff;
+    color: #1a8efd;
+    transform: scale(1.05);
+}
+
 /* Responsive */
 @media screen and (max-width: 1000px) {
     .info-description {
@@ -175,5 +427,28 @@
         left: 50%;
         transform: translateX(calc(-50% + 20px));
         width: 60%;
+    }
+
+    .info-split-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .split-with-divider::before {
+        display: none;
+    }
+
+    .info-split-text h2 {
+        font-size: 2rem;
+    }
+
+    .info-check-list,
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-cta-card h2 {
+        font-size: 2rem;
     }
 }

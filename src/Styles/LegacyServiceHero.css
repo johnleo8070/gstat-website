@@ -1,0 +1,52 @@
+/* Base Styles for un-overhauled service page intro sections */
+.hero-section {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-section {
+    flex: 1;
+}
+
+.text-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #0d4275 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.text-description {
+    font-size: 1.1rem !important;
+    color: #555 !important;
+    margin-bottom: 30px !important;
+    line-height: 1.6 !important;
+}
+
+.text-appointment-btn {
+    padding: 12px 25px !important;
+    background-color: #1a8efd !important;
+    color: white !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    transition: 0.3s !important;
+    cursor: pointer !important;
+    transform: none !important;
+}
+
+.text-appointment-btn:hover {
+    background-color: #0d4275 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 40px 20px !important;
+    }
+}

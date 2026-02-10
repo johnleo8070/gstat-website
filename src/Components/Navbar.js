@@ -3,23 +3,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faXmark,
+  faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../Assets/albright-logo.jpg";
+import logo from "../Assets/gstat-logo.jpg";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const openNav = () => {
     setNav(!nav);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          <img src={logo} alt="Albright Clinic Logo" className="navbar-logo" />
+          <img src={logo} alt="GSTAT MOBILE SOLUTIONS" className="navbar-logo" />
         </Link>
       </h1>
 
@@ -31,28 +37,37 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/services" className="navbar-links">
-            Services
-          </NavLink>
+          <div className="navbar-links" style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "5px" }}>
+            Our Services <FontAwesomeIcon icon={faChevronDown} size="xs" />
+          </div>
+          <div className="dropdown-menu">
+            <div className="dropdown-item"><Link to="/services/social-media-marketing">Social Media Marketing</Link></div>
+            <div className="dropdown-item"><Link to="/services/website-development">Website Development</Link></div>
+            <div className="dropdown-item"><Link to="/services/mobile-app-development">Mobile App Development</Link></div>
+            <div className="dropdown-item"><Link to="/services/bulk-sms">Bulk SMS Marketing</Link></div>
+            <div className="dropdown-item"><Link to="/services/voice-sms">Voice SMS</Link></div>
+            <div className="dropdown-item"><Link to="/services/email-marketing">Email Marketing</Link></div>
+            <div className="dropdown-item"><Link to="/services/sem">Search Engine Marketing</Link></div>
+          </div>
         </li>
         <li>
           <NavLink to="/about" className="navbar-links">
-            About
+            About Us
           </NavLink>
         </li>
         <li>
           <NavLink to="/contact" className="navbar-links">
-            Contact
+            Contact Us
           </NavLink>
         </li>
       </ul>
 
-      <Link to="/appointment" className="navbar-btn-link">
+      <Link to="/quotation" className="navbar-btn-link">
         <button
           className="navbar-btn"
           type="button"
         >
-          BOOK APPOINTMENT
+          GET QUOTATION
         </button>
       </Link>
 
@@ -69,23 +84,32 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={openNav} to="/services">
-              Services
-            </NavLink>
+            <div onClick={toggleDropdown} style={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: "5px" }}>
+              Our Services <FontAwesomeIcon icon={faChevronDown} size="xs" />
+            </div>
+            <div className={`mobile-dropdown ${dropdownOpen ? "open" : ""}`}>
+              <NavLink onClick={openNav} to="/services/social-media-marketing">Social Media Marketing</NavLink>
+              <NavLink onClick={openNav} to="/services/website-development">Website Development</NavLink>
+              <NavLink onClick={openNav} to="/services/mobile-app-development">Mobile App Development</NavLink>
+              <NavLink onClick={openNav} to="/services/bulk-sms">Bulk SMS</NavLink>
+              <NavLink onClick={openNav} to="/services/voice-sms">Voice SMS</NavLink>
+              <NavLink onClick={openNav} to="/services/email-marketing">Email Marketing</NavLink>
+              <NavLink onClick={openNav} to="/services/sem">SEM</NavLink>
+            </div>
           </li>
           <li>
             <NavLink onClick={openNav} to="/about">
-              About
+              About Us
             </NavLink>
           </li>
           <li>
             <NavLink onClick={openNav} to="/contact">
-              Contact
+              Contact Us
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={openNav} to="/appointment">
-              Book Appointment
+            <NavLink onClick={openNav} to="/quotation">
+              Get Quotation
             </NavLink>
           </li>
         </ul>

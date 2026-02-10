@@ -1,7 +1,7 @@
 import React from "react";
-import Doctor from "../Assets/doctor-group.png";
 import SolutionStep from "./SolutionStep";
 import { motion } from "framer-motion";
+import AboutImage from "../Assets/hero-about.png";
 import "../Styles/About.css";
 
 function About() {
@@ -14,10 +14,11 @@ function About() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <img src={Doctor} alt="Doctor Group" className="about-image1" />
+        <img src={AboutImage} alt="GSTAT Team" className="about-image1" />
       </motion.div>
 
       <motion.div
+        // ... (rest of the file remains same, but I'll replace the chunk correctly)
         className="about-text-content"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -30,31 +31,28 @@ function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <span>About Albright Clinic</span>
+          <span>About GSTAT MOBILE SOLUTIONS</span>
         </motion.h3>
         <p className="about-description">
-          Albright Clinic is a patient-centered mental health clinic in Richmond, Texas,
-          specializing in psychiatric evaluations, medication management, and behavioral
-          health services. Our experienced mental health professionals are committed to
-          addressing emotional, psychological, and behavioral challenges with empathy and
-          clinical excellence. We believe mental wellness is essential to overall health.
+          GSTAT MOBILE SOLUTIONS is a full-service digital marketing and technology agency committed to helping businesses build visibility, attract customers, and increase revenue through innovative digital solutions.
+          From startups to established enterprises, we provide data-driven marketing strategies, professional web development, mobile app solutions, and bulk communication services that deliver measurable results.
         </p>
 
-        <h4 className="about-text-title">Our Approach to Care</h4>
+        <h4 className="about-text-title">Our Process</h4>
 
         <SolutionStep
-          title="Comprehensive Evaluation"
-          description="We begin with thorough psychiatric assessments to understand your unique mental health needs, symptoms, and goals for treatment."
+          title="Consultation & Strategy"
+          description="We analyze your business needs and develop a customized digital strategy to achieve your goals."
         />
 
         <SolutionStep
-          title="Personalized Treatment Plan"
-          description="Our team develops customized treatment plans combining therapy, medication management, and behavioral interventions tailored to your specific situation."
+          title="Implementation & Development"
+          description="Our expert team designs, builds, and launches your campaigns, websites, or apps with precision."
         />
 
         <SolutionStep
-          title="Ongoing Support & Wellness"
-          description="We provide continuous care and monitoring to ensure your treatment is effective, making adjustments as needed to support your long-term mental wellness."
+          title="Growth & Optimization"
+          description="We continuously monitor performance and optimize for maximum ROI and business growth."
         />
       </motion.div>
     </div>
