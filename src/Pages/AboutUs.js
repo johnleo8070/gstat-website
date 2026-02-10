@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import About from "../Components/About";
+import FAQSection from "../Components/FAQSection";
 import Reviews from "../Components/Reviews";
 import Footer from "../Components/Footer";
 import SEO from "../Components/SEO";
@@ -15,6 +16,7 @@ function AboutUs() {
             />
             <Navbar />
             <About />
+            <FAQSection />
             <Reviews />
             <Footer />
         </div>
