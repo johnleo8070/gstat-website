@@ -30,6 +30,22 @@
     transform: translateX(-50%);
 }
 
+.feature-tech-container {
+    background-color: #fcfdfe;
+    border-radius: 30px;
+    padding: 60px;
+    margin-bottom: 60px;
+}
+
+.sub-section-header {
+    font-size: 1.8rem;
+    color: #0d4275;
+    border-bottom: 2px solid #FF8C00;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
 .info-split-text {
     flex: 1;
     width: 100%;
@@ -317,7 +333,7 @@
 /* Symmetric Industry Grid */
 .industries-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 15px;
 }
 
@@ -464,7 +480,12 @@
 
     .info-check-list,
     .industries-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .feature-tech-container {
+        padding: 40px 20px;
+        border-radius: 20px;
     }
 
     .info-sub-section {

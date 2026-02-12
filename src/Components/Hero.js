@@ -17,7 +17,7 @@ function Hero() {
   const navigate = useNavigate();
 
   const handleGetStartedClick = () => {
-    navigate("/services/social-media-marketing");
+    navigate("/contact");
   };
 
   const handleConsultationClick = () => {

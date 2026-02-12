@@ -22,7 +22,7 @@ const Chatbot = () => {
     const [messages, setMessages] = useState([
         {
             id: 1,
-            text: "Hi! I'm FALVO 🤖, your GSTAT assistant. How can I help you grow your business today?",
+            text: "Hi! I'm FLVKO 🤖, your GSTAT assistant. How can I help you grow your business today?",
             sender: "bot",
             timestamp: new Date()
         }

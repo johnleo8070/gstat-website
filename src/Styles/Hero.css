@@ -140,6 +140,7 @@
     /* Keeping user's latest override */
     z-index: 1;
     transform-origin: center center;
+    margin-top: -170px;
 }
 
 /* Floating Cards */

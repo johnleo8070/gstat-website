@@ -144,9 +144,9 @@ function WebsiteDevelopment() {
                     </div>
 
                     {/* 3. Key Features & Technologies */}
-                    <div className="info-split-section split-with-divider" style={{ backgroundColor: '#fcfdfe', borderRadius: '30px', padding: '60px' }}>
+                    <div className="info-split-section split-with-divider feature-tech-container">
                         <div className="info-split-text">
-                            <h2 style={{ fontSize: '1.8rem', borderBottom: '2px solid #FF8C00', display: 'inline-block', marginBottom: '30px', paddingBottom: '10px' }}>Key Website Features</h2>
+                            <h2 className="sub-section-header">Key Website Features</h2>
                             <ul className="info-check-list">
                                 <li><FontAwesomeIcon icon={faRotate} /> Mobile-responsive design</li>
                                 <li><FontAwesomeIcon icon={faSearch} /> SEO-friendly structure</li>
@@ -157,8 +157,8 @@ function WebsiteDevelopment() {
                             </ul>
                         </div>
                         <div className="info-split-text">
-                            <h2 style={{ fontSize: '1.8rem', borderBottom: '2px solid #FF8C00', display: 'inline-block', marginBottom: '30px', paddingBottom: '10px' }}>Technologies We Use</h2>
-                            <div className="industries-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '15px' }}>
+                            <h2 className="sub-section-header">Technologies We Use</h2>
+                            <div className="industries-grid">
                                 <div className="industry-item"><FontAwesomeIcon icon={faGlobe} /> WordPress</div>
                                 <div className="industry-item"><FontAwesomeIcon icon={faCode} /> React</div>
                                 <div className="industry-item"><FontAwesomeIcon icon={faStore} /> Shopify</div>
