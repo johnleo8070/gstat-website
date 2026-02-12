@@ -27,6 +27,8 @@ function Footer() {
             <li><Link to="/services/website-development">Website Development</Link></li>
             <li><Link to="/services/mobile-app-development">Mobile App Development</Link></li>
             <li><Link to="/services/bulk-sms">Bulk SMS Marketing</Link></li>
+            <li><Link to="/services/voice-sms">Voice SMS Marketing</Link></li>
+            <li><Link to="/services/email-marketing">Email Marketing</Link></li>
             <li><Link to="/services/sem">Search Engine Marketing</Link></li>
           </ul>
         </div>
