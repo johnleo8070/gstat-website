@@ -13,7 +13,7 @@ function Footer() {
               GSTAT MOBILE SOLUTIONS
             </p>
             <p className="ft-description">
-              Leading digital marketing and technology solutions provider offering social media marketing, web development, mobile apps, bulk SMS, voice SMS, email marketing, and search engine marketing services.
+              Leading digital marketing and technology solutions provider offering social media marketing, web development, mobile apps,  SMS marketing, voice SMS, email marketing, and search engine marketing services.
             </p>
           </div>
 
@@ -26,7 +26,7 @@ function Footer() {
             <li><Link to="/services/social-media-marketing">Social Media Marketing</Link></li>
             <li><Link to="/services/website-development">Website Development</Link></li>
             <li><Link to="/services/mobile-app-development">Mobile App Development</Link></li>
-            <li><Link to="/services/bulk-sms">Bulk SMS Marketing</Link></li>
+            <li><Link to="/services/bulk-sms"> SMS Marketing</Link></li>
             <li><Link to="/services/voice-sms">Voice SMS Marketing</Link></li>
             <li><Link to="/services/email-marketing">Email Marketing</Link></li>
             <li><Link to="/services/sem">Search Engine Marketing</Link></li>

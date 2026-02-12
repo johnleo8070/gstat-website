@@ -140,7 +140,13 @@
     /* Keeping user's latest override */
     z-index: 1;
     transform-origin: center center;
-    margin-top: -170px;
+}
+
+/* Laptop view (769px - 1366px) */
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    .homepage-hero .hero-image1 {
+        margin-top: -170px;
+    }
 }
 
 /* Floating Cards */
@@ -217,25 +223,6 @@
     color: rgba(255, 140, 0, 0.1);
 }
 
-/* Responsive */
-@media screen and (max-width: 1200px) {
-    .homepage-hero .text-title {
-        font-size: 3rem;
-    }
-
-    .homepage-hero .stat-card-1 {
-        right: -10px;
-    }
-
-    .homepage-hero .stat-card-2 {
-        left: -10px;
-    }
-
-    .homepage-hero .hero-image1 {
-        max-width: 500px;
-        transform: scale(1.8);
-    }
-}
 
 @media screen and (max-width: 968px) {
     .hero-section.homepage-hero {
@@ -349,7 +336,7 @@
     }
 
     .homepage-hero .hero-image1 {
-        transform: scale(1.42) translateX(-37px);
+        transform: scale(1.42) translateX(-37px) 
     }
 
     .homepage-hero .text-headline {
