@@ -1,22 +1,20 @@
 import React from "react";
+import Doctor from "../Assets/doctor-picture.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faRocket,
-  faArrowRight,
-  faCheckCircle,
-  faGlobe,
-  faMobileAlt,
-  faChartLine
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck, faAngleUp, faCircleCheck, faClock } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import HeroImage from "../Assets/hero-home.png";
 import "../Styles/Hero.css";
 
 function Hero() {
   const navigate = useNavigate();
+  const [goUp, setGoUp] = React.useState(false);
 
-  const handleGetStartedClick = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleBookAppointmentClick = () => {
     navigate("/contact");
   };
 
@@ -24,9 +22,24 @@ function Hero() {
     navigate("/quotation");
   };
 
+  React.useEffect(() => {
+    const onPageScroll = () => {
+      if (window.scrollY > 600) {
+        setGoUp(true);
+      } else {
+        setGoUp(false);
+      }
+    };
+    window.addEventListener("scroll", onPageScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onPageScroll);
+    };
+  }, []);
+
   return (
-    <div className="hero-full-width-container">
-      <div className="hero-section homepage-hero">
+    <div className="hero-full-width">
+      <div className="hero-section">
         <motion.div
           className="text-section"
           initial={{ opacity: 0, x: -50 }}
@@ -57,100 +70,79 @@ function Hero() {
           >
             At GSTAT MOBILE SOLUTIONS, we are dedicated to empowering businesses with cutting-edge digital tools
             and result-driven marketing strategies. Our team of experts specializes in crafting bespoke
-            online experiences—from high-performance web development and innovative mobile apps to
-            data-driven SEO and robust bulk messaging platforms—designed to help you achieve
+            online experiencesfrom high-performance web development and innovative mobile apps to
+            data-driven SEO and robust bulk messaging platformsdesigned to help you achieve
             sustainable growth and digital excellence.
           </motion.p>
-
           <div className="hero-buttons">
             <motion.button
               className="text-appointment-btn"
               type="button"
-              onClick={handleGetStartedClick}
+              onClick={handleBookAppointmentClick}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get Started <FontAwesomeIcon icon={faRocket} />
+              <FontAwesomeIcon icon={faCalendarCheck} /> Get Started
             </motion.button>
             <motion.button
               className="text-appointment-btn border-btn"
               type="button"
               onClick={handleConsultationClick}
-              whileHover={{ scale: 1.05, backgroundColor: '#1E8FFD', color: 'white' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Request Consultation <FontAwesomeIcon icon={faArrowRight} />
+              Request Consultation
             </motion.button>
           </div>
-
           <motion.div
-            className="hero-highlights"
-            initial={{ opacity: 0, y: 20 }}
+            className="hero-benefits"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
+            transition={{ delay: 1, duration: 0.7 }}
           >
-            <div className="highlight-item">
-              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
-              <span>Full-Service Digital Marketing & SEO</span>
+            <div className="benefit-item">
+              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
+              <p style={{ color: '#1A8EFD' }}>Full-service digital marketing & SEO</p>
             </div>
-            <div className="highlight-item">
-              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
-              <span>Expert Web & Mobile App Development</span>
+
+            <div className="benefit-item">
+              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
+              <p style={{ color: '#1A8EFD' }}>Mobile-first web & app development</p>
             </div>
-            <div className="highlight-item">
-              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
-              <span>Bulk SMS & Voice Messaging Solutions</span>
+
+            <div className="benefit-item">
+              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
+              <p style={{ color: '#1A8EFD' }}>Bulk SMS, voice & messaging solutions</p>
             </div>
-            <div className="highlight-item">
-              <FontAwesomeIcon icon={faCheckCircle} className="highlight-icon" />
-              <span>24/7 Dedicated Support & Consultation</span>
+
+            <div className="benefit-item">
+              <FontAwesomeIcon icon={faClock} className="benefit-icon" style={{ color: '#000000' }} />
+              <p style={{ color: '#1A8EFD' }}>24/7 dedicated support & consultation</p>
             </div>
           </motion.div>
         </motion.div>
 
         <motion.div
           className="hero-image-section"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
         >
-          <div className="image-wrapper">
-            <img src={HeroImage} alt="GSTAT Digital Solutions" className="hero-image1" />
-
-            {/* Floating Elements */}
-            <motion.div
-              className="floating-card stat-card-1"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="stat-icon"><FontAwesomeIcon icon={faCheckCircle} /></div>
-              <div className="stat-info">
-                <h4>500+</h4>
-                <p>Happy Clients</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="floating-card stat-card-2"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            >
-              <div className="stat-icon secondary"><FontAwesomeIcon icon={faChartLine} /></div>
-              <div className="stat-info">
-                <h4>98%</h4>
-                <p>Success Rate</p>
-              </div>
-            </motion.div>
-
-            {/* Decorative Icons */}
-            <motion.div className="decor-icon icon-globe" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}>
-              <FontAwesomeIcon icon={faGlobe} />
-            </motion.div>
-            <motion.div className="decor-icon icon-mobile" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
-              <FontAwesomeIcon icon={faMobileAlt} />
-            </motion.div>
-          </div>
+          <img className="hero-image1" src={Doctor} alt="Doctor" />
         </motion.div>
+      </div>
+
+      <div
+        onClick={scrollToTop}
+        className={`scroll-up ${goUp ? "show-scroll" : ""}`}
+      >
+        <FontAwesomeIcon icon={faAngleUp} />
       </div>
     </div>
   );
