@@ -51,6 +51,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
+            style={{ color: "#FF8C00" }}
           >
             🚀 GSTAT MOBILE SOLUTIONS
           </motion.p>
@@ -68,10 +69,10 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            At GSTAT MOBILE SOLUTIONS, we are dedicated to empowering businesses with cutting-edge digital tools
+            GSTAT MOBILE SOLUTIONS is a digital marketing  company in Nigeria, we are dedicated to empowering businesses with cutting-edge digital tools
             and result-driven marketing strategies. Our team of experts specializes in crafting bespoke
-            online experiencesfrom high-performance web development and innovative mobile apps to
-            data-driven SEO and robust bulk messaging platformsdesigned to help you achieve
+            online experiences from high-performance web development and innovative mobile apps to
+            data-driven SEO and robust bulk messaging platforms designed to help you achieve
             sustainable growth and digital excellence.
           </motion.p>
           <div className="hero-buttons">
@@ -88,7 +89,7 @@ function Hero() {
               <FontAwesomeIcon icon={faCalendarCheck} /> Get Started
             </motion.button>
             <motion.button
-              className="text-appointment-btn border-btn"
+              className="text-appointment-btn"
               type="button"
               onClick={handleConsultationClick}
               initial={{ opacity: 0, y: 20 }}
@@ -107,22 +108,22 @@ function Hero() {
             transition={{ delay: 1, duration: 0.7 }}
           >
             <div className="benefit-item">
-              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
+              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#FF8C00' }} />
               <p style={{ color: '#1A8EFD' }}>Full-service digital marketing & SEO</p>
             </div>
 
             <div className="benefit-item">
-              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
+              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#FF8C00' }} />
               <p style={{ color: '#1A8EFD' }}>Mobile-first web & app development</p>
             </div>
 
             <div className="benefit-item">
-              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#000000' }} />
-              <p style={{ color: '#1A8EFD' }}>Bulk SMS, voice & messaging solutions</p>
+              <FontAwesomeIcon icon={faCircleCheck} className="benefit-icon" style={{ color: '#FF8C00' }} />
+              <p style={{ color: '#1A8EFD' }}> SMS marketing, voice & messaging solutions</p>
             </div>
 
             <div className="benefit-item">
-              <FontAwesomeIcon icon={faClock} className="benefit-icon" style={{ color: '#000000' }} />
+              <FontAwesomeIcon icon={faClock} className="benefit-icon" style={{ color: '#FF8C00' }} />
               <p style={{ color: '#1A8EFD' }}>24/7 dedicated support & consultation</p>
             </div>
           </motion.div>

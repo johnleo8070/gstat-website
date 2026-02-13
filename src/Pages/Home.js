@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
-import InfoCards from "../Components/InfoCards";
 import HomeContent from "../Components/HomeContent";
 import Footer from "../Components/Footer";
 import SEO from "../Components/SEO";
@@ -16,7 +15,6 @@ function Home() {
       />
       <Navbar />
       <Hero />
-      <InfoCards />
       <HomeContent />
       <Footer />
     </div>

@@ -55,6 +55,10 @@ h6 {
     font-family: 'Rubik', sans-serif;
 }
 
+h2 {
+    color: #0d4275;
+}
+
 .section-title {
     color: var(--primary-color);
     font-weight: 700;

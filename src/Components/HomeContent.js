@@ -1,4 +1,5 @@
 import React from "react";
+import InfoCards from "./InfoCards";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faShareNodes,
@@ -59,6 +60,8 @@ function HomeContent() {
                     From startups to established enterprises, we provide data-driven marketing strategies, professional web development, mobile app solutions, and bulk communication services that deliver measurable results.
                 </p>
             </section>
+
+            <InfoCards />
 
             {/* 2. Core Services */}
             <section className="services-section">
