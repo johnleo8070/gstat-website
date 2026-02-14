@@ -41,17 +41,17 @@ function About() {
           <br />
           <h4 className="about-text-title">Our Process</h4>
 
-            <SolutionStep
-              title="Consultation & Strategy"
-              description="We analyze your business needs and develop a customized digital strategy to achieve your goals."
-            />
-            <br />
+          <SolutionStep
+            title="Consultation & Strategy"
+            description="We analyze your business needs and develop a customized digital strategy to achieve your goals."
+          />
+          <br />
 
-        <SolutionStep
-          title="Implementation & Development"
-          description="Our expert team designs, builds, and launches your campaigns, websites, or apps with precision."
-        />
-        <br />
+          <SolutionStep
+            title="Implementation & Development"
+            description="Our expert team designs, builds, and launches your campaigns, websites, or apps with precision."
+          />
+          <br />
 
           <SolutionStep
             title="Growth & Optimization"

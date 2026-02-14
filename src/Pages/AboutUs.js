@@ -17,7 +17,7 @@ function AboutUs() {
             <Navbar />
             <About />
             <FAQSection />
-            <Reviews />
+           
             <Footer />
         </div>
     );

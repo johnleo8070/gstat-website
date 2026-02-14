@@ -1,41 +1,22 @@
 import React from "react";
 import Doctor from "../Assets/doctor-picture.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarCheck, faAngleUp, faCircleCheck, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck, faCircleCheck, faClock } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../Styles/Hero.css";
 
 function Hero() {
   const navigate = useNavigate();
-  const [goUp, setGoUp] = React.useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const handleBookAppointmentClick = () => {
     navigate("/contact");
   };
 
+
+
   const handleConsultationClick = () => {
     navigate("/quotation");
   };
-
-  React.useEffect(() => {
-    const onPageScroll = () => {
-      if (window.scrollY > 600) {
-        setGoUp(true);
-      } else {
-        setGoUp(false);
-      }
-    };
-    window.addEventListener("scroll", onPageScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onPageScroll);
-    };
-  }, []);
 
   return (
     <div className="hero-full-width">
@@ -139,12 +120,6 @@ function Hero() {
         </motion.div>
       </div>
 
-      <div
-        onClick={scrollToTop}
-        className={`scroll-up ${goUp ? "show-scroll" : ""}`}
-      >
-        <FontAwesomeIcon icon={faAngleUp} />
-      </div>
     </div>
   );
 }

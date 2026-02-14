@@ -1,5 +1,6 @@
 import React from "react";
 import InfoCards from "./InfoCards";
+import Reviews from "./Reviews";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faShareNodes,
@@ -211,49 +212,7 @@ function HomeContent() {
             </section>
 
             {/* 6. Testimonials Section */}
-            <section className="home-testimonials-section">
-                <div className="content-section-title">
-                    <h2>What Our Clients Say</h2>
-                    <div className="title-underline"></div>
-                </div>
-
-                <div className="testimonial-container">
-                    <motion.div
-                        className="testimonial-card"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <p className="testimonial-quote">
-                            "GSTAT MOBILE SOLUTIONS transformed our online presence. Their data-driven approach to SEO and social media marketing helped our sales double within months."
-                        </p>
-                        <div className="testimonial-author">
-                            <div className="author-info">
-                                <h4>Samuel Adeniyi</h4>
-                                <p>CEO, TechAdvance Nigeria</p>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        className="testimonial-card orange"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                    >
-                        <p className="testimonial-quote">
-                            "The bulk SMS and digital marketing campaigns they executed for us were flawless. We saw immediate engagement and a significant ROI. Highly recommended!"
-                        </p>
-                        <div className="testimonial-author">
-                            <div className="author-info">
-                                <h4>Blessing Chima</h4>
-                                <p>Marketing Manager, RetailFlow</p>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <Reviews />
 
             {/* 7. Call to Action Section */}
             <section className="home-cta-section">

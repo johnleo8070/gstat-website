@@ -29,10 +29,10 @@
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
     object-fit: contain;
     /* Better for transparent people images than cover */
-    transform: scale(1.8) translateX(-5px) ;
+    transform: scale(1.8) translateX(-5px);
     /* Match Hero scale and offset left */
     transform-origin: center center;
-    
+
 }
 
 /* Text */
@@ -173,6 +173,6 @@
     }
 
     .about-image1 {
-        transform: scale(1.3) translateX(-150px);
+        transform: scale(1.3) translateX(-10px);
     }
 }
