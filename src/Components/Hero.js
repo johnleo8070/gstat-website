@@ -145,7 +145,7 @@ function Hero() {
       >
         <FontAwesomeIcon icon={faAngleUp} />
       </div>
-    </div >
+    </div>
   );
 }
 
