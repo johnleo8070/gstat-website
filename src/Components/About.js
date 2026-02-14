@@ -1,5 +1,6 @@
 import React from "react";
 import SolutionStep from "./SolutionStep";
+import Reviews from "./Reviews";
 import { motion } from "framer-motion";
 import AboutImage from "../Assets/hero-about.png";
 import "../Styles/About.css";
@@ -59,6 +60,7 @@ function About() {
           />
         </div>
       </motion.div>
+      <Reviews />
     </div>
   );
 }

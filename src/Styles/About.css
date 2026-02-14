@@ -173,6 +173,6 @@
     }
 
     .about-image1 {
-        transform: scale(1.3) translateX(-10px);
+        transform: scale(1.3) translateX(-150px);
     }
 }
