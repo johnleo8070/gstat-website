@@ -151,6 +151,13 @@
     height: auto;
 }
 
+@media screen and (max-width: 600px) {
+    .hero-image1 {
+        width: 130%;
+        transform: translateX(-55px) translateY(-50px);
+    }
+}
+
 /* Scroll Btn */
 .scroll-up {
     width: 45px;
@@ -173,6 +180,7 @@
 
 .show-scroll {
     display: flex;
+    transform: translateY(-50px) translateX(10px);
 }
 
 /* Responsive */
@@ -184,13 +192,18 @@
 
     .hero-image-section {
         width: 100%;
-        margin-bottom: 32px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
     }
 
     .text-section {
         width: 100%;
         padding: 24px;
         text-align: center;
+        position: relative;
+        z-index: 2;
+        margin-top: -150px;
     }
 
     .text-title,
