@@ -16,15 +16,17 @@ export default function ScrollToTop() {
     // Toggle visibility based on scroll position
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.pageYOffset > 300) {
+            if (typeof window !== 'undefined' && window.scrollY > 300) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
             }
         };
 
-        window.addEventListener("scroll", toggleVisibility);
-        return () => window.removeEventListener("scroll", toggleVisibility);
+        if (typeof window !== 'undefined') {
+            window.addEventListener("scroll", toggleVisibility);
+            return () => window.removeEventListener("scroll", toggleVisibility);
+        }
     }, []);
 
     const scrollToTop = () => {
