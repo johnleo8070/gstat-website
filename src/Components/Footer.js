@@ -46,7 +46,9 @@ function Footer() {
               <a href="https://wa.me/2347037018216" target="_blank" rel="noopener noreferrer">WhatsApp: 070 3701 8216</a>
             </li>
             <li>
-              <span style={{ margin: '5px 0', color: '#666', display: 'inline-block' }}>6, Trimnell Street, Aguda, Surulere, Lagos.</span>
+              <a href="https://maps.app.goo.gl/JSbH9tEg9HPydbAC9" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <span style={{ margin: '5px 0', color: '#666', display: 'inline-block' }}>6, Trimnell Street, Aguda, Surulere, Lagos.</span>
+              </a>
             </li>
             <li>
               <Link to="/quotation">Get Quotation</Link>
