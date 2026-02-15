@@ -9,6 +9,7 @@ import Contact from "./Pages/Contact";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
 import TermsOfService from "./Components/TermsOfService";
 import Chatbot from "./Components/Chatbot";
+import GoUp from "./Components/GoUp";
 import SocialMediaMarketing from "./Pages/Services/SocialMediaMarketing";
 import WebsiteDevelopment from "./Pages/Services/WebsiteDevelopment";
 import MobileAppDevelopment from "./Pages/Services/MobileAppDevelopment";
@@ -40,6 +41,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Chatbot />
+        <GoUp />
       </Router>
     </div>
   );
