@@ -39,14 +39,14 @@ function BulkSMS() {
     return (
         <div className="service-page">
             <SEO
-                title="Bulk SMS & SMS Marketing Services in Nigeria | GSTAT MOBILE SOLUTIONS"
-                description="Reach customers instantly with GSTAT MOBILE SOLUTIONS Bulk SMS services. Fast delivery, affordable rates, promotional and transactional SMS solutions for businesses."
+                title="SMS Marketing Services in Nigeria | GSTAT MOBILE SOLUTIONS"
+                description="Reach customers instantly with GSTAT MOBILE SOLUTIONS SMS Marketing services. Fast delivery, affordable rates, promotional and transactional SMS solutions for businesses."
                 type="website"
             />
             <Navbar />
 
             <ServiceHero
-                title="Bulk SMS"
+                title="SMS Marketing"
                 subtitle="High-speed digital communication at your fingertips"
                 backgroundImage={bannerImg}
             />
@@ -67,7 +67,7 @@ function BulkSMS() {
                                 SMS marketing remains one of the fastest and most effective communication channels for businesses. With open rates above 90%, text messaging ensures your promotions, alerts, and updates are seen almost immediately.
                             </p>
                             <p>
-                                At GSTAT MOBILE SOLUTIONS, we provide reliable, scalable, and cost-effective bulk SMS solutions that help businesses communicate directly with their customers in real time.
+                                At GSTAT MOBILE SOLUTIONS, we provide reliable, scalable, and cost-effective SMS marketing solutions that help businesses communicate directly with their customers in real time.
                             </p>
                             <p>
                                 Whether you’re running promotions, sending reminders, or broadcasting announcements — our SMS platform guarantees speed, reach, and results.
@@ -97,7 +97,7 @@ function BulkSMS() {
                             {[
                                 {
                                     icon: faBullhorn,
-                                    title: "1. Promotional Bulk SMS",
+                                    title: "1. Promotional SMS Marketing",
                                     desc: "Promote your products and special offers to thousands of customers instantly.",
                                     details: ["Sales promotions", "Product launches", "Event marketing", "Brand awareness"]
                                 },
@@ -238,7 +238,7 @@ function BulkSMS() {
                     >
                         <h2>Start Reaching Customers Instantly</h2>
                         <p>Launch your SMS marketing campaign today with GSTAT MOBILE SOLUTIONS.</p>
-                        <p style={{ marginTop: '-20px', marginBottom: '30px', opacity: 0.7 }}>Contact us now for bulk SMS pricing and setup.</p>
+                        <p style={{ marginTop: '-20px', marginBottom: '30px', opacity: 0.7 }}>Contact us now for SMS marketing pricing and setup.</p>
                         <Link to="/quotation" className="info-cta-btn">
                             Get Started Now <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '10px' }} />
                         </Link>

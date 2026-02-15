@@ -34,7 +34,7 @@ export const faqData = [
     // --- Services Overview ---
     {
         question: "What digital marketing services do you offer?",
-        answer: "We offer a wide range of services including Social Media Marketing, Website Development, Mobile App Development, Bulk SMS, Voice SMS, Email Marketing, and Search Engine Marketing (SEM).",
+        answer: "We offer a wide range of services including Social Media Marketing, Website Development, Mobile App Development, SMS Marketing, Voice SMS, Email Marketing, and Search Engine Marketing (SEM).",
         keywords: ["services", "offer", "marketing", "do", "list", "provide", "solutions"]
     },
     {
@@ -104,11 +104,11 @@ export const faqData = [
         keywords: ["content", "graphics", "video", "flyer", "reels", "design", "create"]
     },
 
-    // --- Bulk SMS & Communication ---
+    // --- SMS Marketing & Communication ---
     {
-        question: "What is Bulk SMS and how can it help my business?",
-        answer: "Bulk SMS allows you to reach thousands of customers instantly with a 90% open rate. It's perfect for promotions, alerts, and updates with nationwide reach and real-time delivery reports.",
-        keywords: ["bulk sms", "sms", "text", "message", "mass", "promotional", "alerts", "notifications"]
+        question: "What is SMS Marketing and how can it help my business?",
+        answer: "SMS Marketing allows you to reach thousands of customers instantly with a 90% open rate. It's perfect for promotions, alerts, and updates with nationwide reach and real-time delivery reports.",
+        keywords: ["sms marketing", "sms", "text", "message", "mass", "promotional", "alerts", "notifications"]
     },
     {
         question: "Do you offer Transactional SMS and OTP services?",

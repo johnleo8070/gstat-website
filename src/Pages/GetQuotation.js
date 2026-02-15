@@ -121,7 +121,7 @@ function GetQuotation() {
                     <option value="Social Media Marketing">Social Media Marketing</option>
                     <option value="Website Development">Website Development</option>
                     <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="Bulk SMS">Bulk SMS Marketing</option>
+                    <option value="SMS Marketing">SMS Marketing</option>
                     <option value="Voice SMS">Voice SMS</option>
                     <option value="Email Marketing">Email Marketing</option>
                     <option value="SEM">Search Engine Marketing (SEM)</option>

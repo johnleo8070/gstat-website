@@ -10,7 +10,7 @@ function Home() {
     <div className="home-section">
       <SEO
         title="GSTAT MOBILE SOLUTIONS | Digital Marketing, Web & Mobile App Services in Nigeria"
-        description="Grow your business online with GSTAT MOBILE SOLUTIONS. We provide social media marketing, website development, mobile apps, bulk SMS, voice SMS, email marketing, and SEM services tailored for Nigerian businesses."
+        description="Grow your business online with GSTAT MOBILE SOLUTIONS. We provide social media marketing, website development, mobile apps, SMS marketing, voice SMS, email marketing, and SEM services tailored for Nigerian businesses."
         type="website"
       />
       <Navbar />

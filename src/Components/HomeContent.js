@@ -58,7 +58,7 @@ function HomeContent() {
                 </div>
                 <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '18px', lineHeight: '1.6', color: '#555' }}>
                     GSTAT MOBILE SOLUTIONS is a full-service digital marketing and technology agency committed to helping businesses build visibility, attract customers, and increase revenue through innovative digital solutions.
-                    From startups to established enterprises, we provide data-driven marketing strategies, professional web development, mobile app solutions, and bulk communication services that deliver measurable results.
+                    From startups to established enterprises, we provide data-driven marketing strategies, professional web development, mobile app solutions, and SMS marketing services that deliver measurable results.
                 </p>
             </section>
 
@@ -88,7 +88,7 @@ function HomeContent() {
                         { icon: faShareNodes, title: "Social Media Marketing", desc: "Grow your brand presence and engage your audience across all platforms.", link: "/services/social-media-marketing" },
                         { icon: faLaptopCode, title: "Website Development", desc: "Responsive, SEO-optimized websites that convert visitors into customers.", link: "/services/website-development" },
                         { icon: faMobileScreen, title: "Mobile App Development", desc: "Powerful Android or iOS mobile applications with seamless user experience.", link: "/services/mobile-app-development" },
-                        { icon: faCommentSms, title: " SMS Marketing", desc: "Reach thousands instantly with fast, reliable, and affordable SMS campaigns.", link: "/services/bulk-sms" },
+                        { icon: faCommentSms, title: "SMS Marketing", desc: "Reach thousands instantly with fast, reliable, and affordable SMS campaigns.", link: "/services/bulk-sms" },
                         { icon: faMicrophone, title: "Voice SMS", desc: "Automated voice messages for campaigns, announcements, and engagement.", link: "/services/voice-sms" },
                         { icon: faEnvelopeOpenText, title: "Email Marketing", desc: "Nurture leads and retain customers through personalized email campaigns.", link: "/services/email-marketing" },
                         { icon: faMagnifyingGlassChart, title: "Search Engine Marketing", desc: "Drive instant traffic and conversions with Google Ads and PPC.", link: "/services/sem" },

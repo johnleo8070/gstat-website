@@ -44,7 +44,7 @@ function Navbar() {
             <div className="dropdown-item"><Link to="/services/social-media-marketing">Social Media Marketing</Link></div>
             <div className="dropdown-item"><Link to="/services/website-development">Website Development</Link></div>
             <div className="dropdown-item"><Link to="/services/mobile-app-development">Mobile App Development</Link></div>
-            <div className="dropdown-item"><Link to="/services/bulk-sms">Bulk SMS Marketing</Link></div>
+            <div className="dropdown-item"><Link to="/services/bulk-sms">SMS Marketing</Link></div>
             <div className="dropdown-item"><Link to="/services/voice-sms">Voice SMS</Link></div>
             <div className="dropdown-item"><Link to="/services/email-marketing">Email Marketing</Link></div>
             <div className="dropdown-item"><Link to="/services/sem">Search Engine Marketing</Link></div>
@@ -91,7 +91,7 @@ function Navbar() {
               <NavLink onClick={openNav} to="/services/social-media-marketing">Social Media Marketing</NavLink>
               <NavLink onClick={openNav} to="/services/website-development">Website Development</NavLink>
               <NavLink onClick={openNav} to="/services/mobile-app-development">Mobile App Development</NavLink>
-              <NavLink onClick={openNav} to="/services/bulk-sms">Bulk SMS</NavLink>
+              <NavLink onClick={openNav} to="/services/bulk-sms">SMS Marketing</NavLink>
               <NavLink onClick={openNav} to="/services/voice-sms">Voice SMS</NavLink>
               <NavLink onClick={openNav} to="/services/email-marketing">Email Marketing</NavLink>
               <NavLink onClick={openNav} to="/services/sem">SEM</NavLink>
