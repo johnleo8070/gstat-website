@@ -53,20 +53,22 @@
 
 .info-split-image {
     flex: 1;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(13, 66, 117, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-split-image img {
     width: 100%;
+    max-width: 550px;
     height: auto;
     display: block;
     transition: transform 0.6s ease;
+    filter: drop-shadow(0 20px 40px rgba(13, 66, 117, 0.15));
 }
 
 .info-split-image:hover img {
-    transform: scale(1.05);
+    transform: translateY(-10px) scale(1.02);
 }
 
 .info-split-text h2 {
@@ -164,6 +166,58 @@
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(26, 142, 253, 0.2);
     border-color: #1a8efd;
+}
+
+/* Active State for CTA cards */
+.info-cards.active {
+    background-color: #1a8efd;
+    border-color: #1a8efd;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(26, 142, 253, 0.2);
+}
+
+.info-cards.active .info-card-title,
+.info-cards.active .info-card-description {
+    color: #ffffff;
+}
+
+.info-cards.active .info-card-icon-wrapper {
+    background-color: #ffffff;
+}
+
+.info-cards.active .info-fa-icon {
+    color: #1a8efd;
+}
+
+.card-cta-btn {
+    margin: 15px auto 25px;
+    padding: 10px 30px;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-cards.active:hover .card-cta-btn {
+    background-color: white;
+    color: #1a8efd;
+    transform: scale(1.05);
+}
+
+.info-cards.active .feature-details-list li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.info-cards.active .feature-details-list li i,
+.info-cards.active .feature-details-list li svg {
+    color: #FF8C00 !important;
 }
 
 .info-card-title {

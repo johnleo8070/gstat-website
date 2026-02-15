@@ -644,8 +644,8 @@
 }
 
 .home-cta-btn {
-    background: #ffffff;
-    color: #1a8efd;
+    background: #FF8C00;
+    color: #ffffff;
     padding: 18px 50px;
     border-radius: 50px;
     font-size: 1.2rem;
@@ -653,14 +653,14 @@
     text-decoration: none;
     display: inline-block;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
 }
 
 .home-cta-btn:hover {
     transform: scale(1.05) translateY(-3px);
-    background: #FF8C00;
+    background: #e67e00;
     color: white;
-    box-shadow: 0 15px 30px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 15px 30px rgba(255, 140, 0, 0.45);
 }
 
 /* Responsive fixes for new sections */

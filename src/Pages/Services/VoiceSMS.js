@@ -120,20 +120,48 @@ function VoiceSMS() {
                                     title: "5. Reports & Analytics",
                                     desc: "Track delivery rates and engagement metrics to measure effectiveness.",
                                     details: ["Call status reports", "Duration analytics", "Delivery success tracking", "Detailed CSV exports"]
+                                },
+                                {
+                                    icon: faArrowRight,
+                                    title: "6. Get Quotation",
+                                    desc: "Ready to launch your project? Get a detailed quote specialized for your business.",
+                                    details: ["Flexible pricing", "Fast turnaround", "Expert support", "Free consultation"],
+                                    isActive: true,
+                                    link: "/quotation"
                                 }
                             ].map((service, index) => (
-                                <motion.div key={index} variants={itemVariants} className="info-cards">
-                                    <div className="info-card-icon-wrapper">
-                                        <FontAwesomeIcon icon={service.icon} className="info-fa-icon" />
-                                    </div>
-                                    <h4 className="info-card-title">{service.title}</h4>
-                                    <p className="info-card-description">{service.desc}</p>
-                                    <ul className="feature-details-list">
-                                        {service.details.map((detail, dIndex) => (
-                                            <li key={dIndex}><FontAwesomeIcon icon={faCircleCheck} /> {detail}</li>
-                                        ))}
-                                    </ul>
-                                </motion.div>
+                                service.isActive ? (
+                                    <Link key={index} to={service.link} style={{ textDecoration: 'none', display: 'block' }}>
+                                        <motion.div variants={itemVariants} className="info-cards active">
+                                            <div className="info-card-icon-wrapper">
+                                                <FontAwesomeIcon icon={service.icon} className="info-fa-icon" />
+                                            </div>
+                                            <h4 className="info-card-title">{service.title}</h4>
+                                            <p className="info-card-description">{service.desc}</p>
+                                            <ul className="feature-details-list">
+                                                {service.details.map((detail, dIndex) => (
+                                                    <li key={dIndex}><FontAwesomeIcon icon={faCircleCheck} /> {detail}</li>
+                                                ))}
+                                            </ul>
+                                            <div className="card-cta-btn">
+                                                Get A Quote <FontAwesomeIcon icon={faArrowRight} />
+                                            </div>
+                                        </motion.div>
+                                    </Link>
+                                ) : (
+                                    <motion.div key={index} variants={itemVariants} className="info-cards">
+                                        <div className="info-card-icon-wrapper">
+                                            <FontAwesomeIcon icon={service.icon} className="info-fa-icon" />
+                                        </div>
+                                        <h4 className="info-card-title">{service.title}</h4>
+                                        <p className="info-card-description">{service.desc}</p>
+                                        <ul className="feature-details-list">
+                                            {service.details.map((detail, dIndex) => (
+                                                <li key={dIndex}><FontAwesomeIcon icon={faCircleCheck} /> {detail}</li>
+                                            ))}
+                                        </ul>
+                                    </motion.div>
+                                )
                             ))}
                         </motion.div>
                     </div>
